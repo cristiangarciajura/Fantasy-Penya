@@ -1,0 +1,2906 @@
+[
+  {
+    "id": "p001",
+    "name": "AGUDO AVILES, IVAN",
+    "team": "Alevín S11 A",
+    "pos": "DEL",
+    "originalPosition": "Banda Derecha",
+    "number": 6
+  },
+  {
+    "id": "p002",
+    "name": "CHFIRA HADRI, ADAM",
+    "team": "Alevín S11 A",
+    "pos": "DEL",
+    "originalPosition": "Banda Derecha",
+    "number": 8
+  },
+  {
+    "id": "p003",
+    "name": "DA SILVA PIO SANCHEZ, THIAGO",
+    "team": "Alevín S11 A",
+    "pos": "POR",
+    "originalPosition": "Portero",
+    "number": 23
+  },
+  {
+    "id": "p004",
+    "name": "EL HAMRI ATANEBA, MUSA",
+    "team": "Alevín S11 A",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 5
+  },
+  {
+    "id": "p005",
+    "name": "FALCÓ SÁNCHEZ, JAN",
+    "team": "Alevín S11 A",
+    "pos": "DEL",
+    "originalPosition": "Delantero centro",
+    "number": 9
+  },
+  {
+    "id": "p006",
+    "name": "PARRILLA MOYA, ADRIAN",
+    "team": "Alevín S11 A",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 11
+  },
+  {
+    "id": "p007",
+    "name": "SALHI BOURASSI, RAYAN",
+    "team": "Alevín S11 A",
+    "pos": "MED",
+    "originalPosition": "Centrocampista",
+    "number": 7
+  },
+  {
+    "id": "p008",
+    "name": "SALHI ESAADANI, YOUSEFF",
+    "team": "Alevín S11 A",
+    "pos": "DEL",
+    "originalPosition": "Banda Izquierda ",
+    "number": 10
+  },
+  {
+    "id": "p009",
+    "name": "AYAT MSAOURI EL MAHBOUBI, IMRAN",
+    "team": "Alevín S11 B",
+    "pos": "DEF",
+    "originalPosition": "Medio centro/defensa",
+    "number": 11
+  },
+  {
+    "id": "p010",
+    "name": "CHELH GARCIA, ABDESLAM",
+    "team": "Alevín S11 B",
+    "pos": "DEL",
+    "originalPosition": "Delantero",
+    "number": 19
+  },
+  {
+    "id": "p011",
+    "name": "DELARCA VENTURA, ANDREW PAUL",
+    "team": "Alevín S11 B",
+    "pos": "DEL",
+    "originalPosition": "Banda derecha",
+    "number": 8
+  },
+  {
+    "id": "p012",
+    "name": "FERNANDEZ SANCHEZ, HUGO",
+    "team": "Alevín S11 B",
+    "pos": "POR",
+    "originalPosition": "Portero",
+    "number": 13
+  },
+  {
+    "id": "p013",
+    "name": "MARTINEZ CARO, LUIS",
+    "team": "Alevín S11 B",
+    "pos": "DEL",
+    "originalPosition": "Banda Izquierda",
+    "number": 10
+  },
+  {
+    "id": "p014",
+    "name": "YANIS",
+    "team": "Alevín S11 B",
+    "pos": "DEF",
+    "originalPosition": "Defensa",
+    "number": 9
+  },
+  {
+    "id": "p015",
+    "name": "ZATARAIZ PADILLA, RUBEN",
+    "team": "Alevín S11 B",
+    "pos": "MED",
+    "originalPosition": "Medio centro",
+    "number": 7
+  },
+  {
+    "id": "p016",
+    "name": "BRAVO PALOMINO, JEAN PIERRE",
+    "team": "Alevín S12 A",
+    "pos": "DEL",
+    "originalPosition": "Banda Izquierda",
+    "number": 15
+  },
+  {
+    "id": "p017",
+    "name": "CHICA CAMINALS, LLUC",
+    "team": "Alevín S12 A",
+    "pos": "POR",
+    "originalPosition": "Portero",
+    "number": 1
+  },
+  {
+    "id": "p018",
+    "name": "FERNADEZ GIMENO, UNAI",
+    "team": "Alevín S12 A",
+    "pos": "DEL",
+    "originalPosition": "Delantero",
+    "number": 14
+  },
+  {
+    "id": "p019",
+    "name": "FERNANDEZ AGUILERA, DAVID",
+    "team": "Alevín S12 A",
+    "pos": "DEF",
+    "originalPosition": "Defensa",
+    "number": 7
+  },
+  {
+    "id": "p020",
+    "name": "HENNOUNI, ADEM MOHAMED ISLEM",
+    "team": "Alevín S12 A",
+    "pos": "DEL",
+    "originalPosition": "Banda derecha",
+    "number": 19
+  },
+  {
+    "id": "p021",
+    "name": "MARTINEZ LLORENTE, BIEL",
+    "team": "Alevín S12 A",
+    "pos": "DEF",
+    "originalPosition": "Defensa",
+    "number": 8
+  },
+  {
+    "id": "p022",
+    "name": "PARDO CARRO, IZAN",
+    "team": "Alevín S12 A",
+    "pos": "DEL",
+    "originalPosition": "Banda derecha",
+    "number": 11
+  },
+  {
+    "id": "p023",
+    "name": "RACHIK, MOHAMED REDA",
+    "team": "Alevín S12 A",
+    "pos": "DEL",
+    "originalPosition": "Delantero",
+    "number": 10
+  },
+  {
+    "id": "p024",
+    "name": "RODRIGUEZ BUENO, ALEJANDRO",
+    "team": "Alevín S12 A",
+    "pos": "DEL",
+    "originalPosition": "Banda derecha",
+    "number": 2
+  },
+  {
+    "id": "p025",
+    "name": "SANCHEZ HERNANDEZ, XAVI",
+    "team": "Alevín S12 A",
+    "pos": "MED",
+    "originalPosition": "Medio Centro",
+    "number": 9
+  },
+  {
+    "id": "p026",
+    "name": "ALIAGA BORRALLO, DANIEL",
+    "team": "Alevín S12 B",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 2
+  },
+  {
+    "id": "p027",
+    "name": "AYALA PRÓSPER, HUGO",
+    "team": "Alevín S12 B",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 19
+  },
+  {
+    "id": "p028",
+    "name": "BAIGET PARDO, JAN",
+    "team": "Alevín S12 B",
+    "pos": "DEL",
+    "originalPosition": "Banda",
+    "number": 12
+  },
+  {
+    "id": "p029",
+    "name": "LLIN CRUZ, NIL",
+    "team": "Alevín S12 B",
+    "pos": "DEL",
+    "originalPosition": "Banda",
+    "number": 30
+  },
+  {
+    "id": "p030",
+    "name": "PEREZ HERNANDEZ, BIEL",
+    "team": "Alevín S12 B",
+    "pos": "DEL",
+    "originalPosition": "Banda",
+    "number": 8
+  },
+  {
+    "id": "p031",
+    "name": "PUIG ROMERA, PAU",
+    "team": "Alevín S12 B",
+    "pos": "POR",
+    "originalPosition": "Portero",
+    "number": 1
+  },
+  {
+    "id": "p032",
+    "name": "RACHI RACHI, MAHER",
+    "team": "Alevín S12 B",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 16
+  },
+  {
+    "id": "p033",
+    "name": "ROMERO ILINA, ALAN",
+    "team": "Alevín S12 B",
+    "pos": "DEF",
+    "originalPosition": "Central ",
+    "number": 11
+  },
+  {
+    "id": "p034",
+    "name": "RUA SERRANO, MATEO",
+    "team": "Alevín S12 B",
+    "pos": "DEL",
+    "originalPosition": "Delantero",
+    "number": 9
+  },
+  {
+    "id": "p035",
+    "name": "RUEDA DIAZ, ALEJANDRO",
+    "team": "Alevín S12 B",
+    "pos": "DEL",
+    "originalPosition": "Banda",
+    "number": 15
+  },
+  {
+    "id": "p036",
+    "name": "SANTALLA PRIETO, IKER",
+    "team": "Alevín S12 B",
+    "pos": "POR",
+    "originalPosition": "Portero",
+    "number": 28
+  },
+  {
+    "id": "p037",
+    "name": "VENTURA LOPEZ, MARC",
+    "team": "Alevín S12 B",
+    "pos": "MED",
+    "originalPosition": "Medio/punta",
+    "number": 10
+  },
+  {
+    "id": "p038",
+    "name": "CABANILLAS MARTINEZ, DANIEL",
+    "team": "Alevín S12 C",
+    "pos": "DEF",
+    "originalPosition": "Defensa ",
+    "number": 4
+  },
+  {
+    "id": "p039",
+    "name": "EL FOUNTI EL HADI, ISMAIL",
+    "team": "Alevín S12 C",
+    "pos": "DEL",
+    "originalPosition": "Delantero ",
+    "number": 9
+  },
+  {
+    "id": "p040",
+    "name": "FLORES GARCIA, CESAR",
+    "team": "Alevín S12 C",
+    "pos": "MED",
+    "originalPosition": "Medio ",
+    "number": 11
+  },
+  {
+    "id": "p041",
+    "name": "GARCIA PEREZ, GERAY",
+    "team": "Alevín S12 C",
+    "pos": "DEL",
+    "originalPosition": "Extremo ",
+    "number": 7
+  },
+  {
+    "id": "p042",
+    "name": "GOMEZ MOYA, ERIC",
+    "team": "Alevín S12 C",
+    "pos": "MED",
+    "originalPosition": "Medio ",
+    "number": 10
+  },
+  {
+    "id": "p043",
+    "name": "MORENO SIERRA, JUAN ANTONIO",
+    "team": "Alevín S12 C",
+    "pos": "POR",
+    "originalPosition": "Portero ",
+    "number": 1
+  },
+  {
+    "id": "p044",
+    "name": "MORGADO SOTO, ARES",
+    "team": "Alevín S12 C",
+    "pos": "DEL",
+    "originalPosition": "Delantero ",
+    "number": 6
+  },
+  {
+    "id": "p045",
+    "name": "MORUNO SANZ, BIEL",
+    "team": "Alevín S12 C",
+    "pos": "DEF",
+    "originalPosition": "Defensa ",
+    "number": 12
+  },
+  {
+    "id": "p046",
+    "name": "OLLE PERAN, OT",
+    "team": "Alevín S12 C",
+    "pos": "DEF",
+    "originalPosition": "Defensa ",
+    "number": 3
+  },
+  {
+    "id": "p047",
+    "name": "PEREGRINA CALVO, XAVIER DAVID",
+    "team": "Alevín S12 C",
+    "pos": "POR",
+    "originalPosition": "Portero ",
+    "number": 13
+  },
+  {
+    "id": "p048",
+    "name": "TIHAMI BELGHITI, MOHAMED AYOUB",
+    "team": "Alevín S12 C",
+    "pos": "DEL",
+    "originalPosition": "Extremo ",
+    "number": 2
+  },
+  {
+    "id": "p049",
+    "name": "BALDE DIAO, AMADOU TIDIANE",
+    "team": "Amateur A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 6
+  },
+  {
+    "id": "p050",
+    "name": "BURJALES CARRILLO, ROGER",
+    "team": "Amateur A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 21
+  },
+  {
+    "id": "p051",
+    "name": "EL AZZAOUY AOURDOU, RACHID",
+    "team": "Amateur A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 24
+  },
+  {
+    "id": "p052",
+    "name": "EL GHRIM OUAROUS, NAOUFAL",
+    "team": "Amateur A",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 9
+  },
+  {
+    "id": "p053",
+    "name": "GAMERO RAMON, RAUL",
+    "team": "Amateur A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 22
+  },
+  {
+    "id": "p054",
+    "name": "GARCIA-ROSADO DURAN, HUGO",
+    "team": "Amateur A",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 16
+  },
+  {
+    "id": "p055",
+    "name": "GARCÍA FERNÁNDEZ, IVAN",
+    "team": "Amateur A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 10
+  },
+  {
+    "id": "p056",
+    "name": "GINESTAR FERNANDEZ, JOAN",
+    "team": "Amateur A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 5
+  },
+  {
+    "id": "p057",
+    "name": "GÁMEZ SANCHO, MANUEL",
+    "team": "Amateur A",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 1
+  },
+  {
+    "id": "p058",
+    "name": "LUNES SEIJAS, PAU",
+    "team": "Amateur A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 15
+  },
+  {
+    "id": "p059",
+    "name": "MANZANO ARROYO, DANIEL",
+    "team": "Amateur A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL IZQUIERDO",
+    "number": 12
+  },
+  {
+    "id": "p060",
+    "name": "MARSOU BEN DRIS, HICHAM",
+    "team": "Amateur A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 4
+  },
+  {
+    "id": "p061",
+    "name": "MARTINEZ GRANDA, ALEJANDRO",
+    "team": "Amateur A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 3
+  },
+  {
+    "id": "p062",
+    "name": "MARTÍNEZ GÓMEZ, ERIC",
+    "team": "Amateur A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 8
+  },
+  {
+    "id": "p063",
+    "name": "MORENO PADILLA, ERIC",
+    "team": "Amateur A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 11
+  },
+  {
+    "id": "p064",
+    "name": "MUÑOZ JIMENEZ, LEO",
+    "team": "Amateur A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DERECHO",
+    "number": 2
+  },
+  {
+    "id": "p065",
+    "name": "PATIÑO HERNANDEZ, JAN",
+    "team": "Amateur A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 23
+  },
+  {
+    "id": "p066",
+    "name": "PEREZ DE TUDELA SANCHEZ, HUGO",
+    "team": "Amateur A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DERECHO",
+    "number": 18
+  },
+  {
+    "id": "p067",
+    "name": "PEREZ GASPAR, XAVIER",
+    "team": "Amateur A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 25
+  },
+  {
+    "id": "p068",
+    "name": "RODRIGUEZ ESCOZ, AARON",
+    "team": "Amateur A",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 13
+  },
+  {
+    "id": "p069",
+    "name": "ROMERO NUÑEZ, TOMAS IGNACIO",
+    "team": "Amateur A",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 17
+  },
+  {
+    "id": "p070",
+    "name": "RUIZ MARTIN, OMAR",
+    "team": "Amateur A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 14
+  },
+  {
+    "id": "p071",
+    "name": "SANCHEZ URDA, DAVID",
+    "team": "Amateur A",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 19
+  },
+  {
+    "id": "p072",
+    "name": "TALKAM, FAYCAL",
+    "team": "Amateur A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 7
+  },
+  {
+    "id": "p073",
+    "name": "BRAVO PALOMINO, JOFRE STALIN",
+    "team": "Amateur B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL IZQ.",
+    "number": 15
+  },
+  {
+    "id": "p074",
+    "name": "CABELLO GONZALEZ, IAN",
+    "team": "Amateur B",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 3
+  },
+  {
+    "id": "p075",
+    "name": "DEMBA DABO",
+    "team": "Amateur B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DER.",
+    "number": 16
+  },
+  {
+    "id": "p076",
+    "name": "EL BOUKIRI AHARMIM, BILAL",
+    "team": "Amateur B",
+    "pos": "MED",
+    "originalPosition": "MEDIA PUNTA",
+    "number": 8
+  },
+  {
+    "id": "p077",
+    "name": "LOPEZ SANCHEZ, VICTOR",
+    "team": "Amateur B",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 4
+  },
+  {
+    "id": "p078",
+    "name": "LORENZO PEREZ, NOAH",
+    "team": "Amateur B",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 17
+  },
+  {
+    "id": "p079",
+    "name": "MARIN GÓMEZ, ADRIÀ",
+    "team": "Amateur B",
+    "pos": "DEL",
+    "originalPosition": "PUNTA",
+    "number": 12
+  },
+  {
+    "id": "p080",
+    "name": "MARQUEZ CARRILLO, TOMAS",
+    "team": "Amateur B",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": null
+  },
+  {
+    "id": "p081",
+    "name": "MARTINEZ PADILLA, JUAN PEDRO",
+    "team": "Amateur B",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 13
+  },
+  {
+    "id": "p082",
+    "name": "MIGUEL MARTOS LINDEZ",
+    "team": "Amateur B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DER.",
+    "number": 5
+  },
+  {
+    "id": "p083",
+    "name": "MUÑIZ ROBLEDO, YERAY",
+    "team": "Amateur B",
+    "pos": "DEL",
+    "originalPosition": "PUNTA",
+    "number": 10
+  },
+  {
+    "id": "p084",
+    "name": "Miquel Capdevila",
+    "team": "Amateur B",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": null
+  },
+  {
+    "id": "p085",
+    "name": "NIEVES FERNANDEZ, ALBERTO",
+    "team": "Amateur B",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 1
+  },
+  {
+    "id": "p086",
+    "name": "PAU FERNANDEZ CUADRA",
+    "team": "Amateur B",
+    "pos": "MED",
+    "originalPosition": "MEDIA PUNTA",
+    "number": null
+  },
+  {
+    "id": "p087",
+    "name": "PEREZ RUIZ, SERGIO",
+    "team": "Amateur B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL IZQ.",
+    "number": 2
+  },
+  {
+    "id": "p088",
+    "name": "RICARDO AGUILAR, ADRIAN",
+    "team": "Amateur B",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 21
+  },
+  {
+    "id": "p089",
+    "name": "ROJAS HERRANZ, MARTI",
+    "team": "Amateur B",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 19
+  },
+  {
+    "id": "p090",
+    "name": "SANCHEZ LUACES, IKER",
+    "team": "Amateur B",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO DER.",
+    "number": 11
+  },
+  {
+    "id": "p091",
+    "name": "SORRIBES LOPEZ, IZAN",
+    "team": "Amateur B",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO IZQ.",
+    "number": 9
+  },
+  {
+    "id": "p092",
+    "name": "SUGI, SORATO",
+    "team": "Amateur B",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO DER.",
+    "number": 14
+  },
+  {
+    "id": "p093",
+    "name": "TALAYERO CARRASCO, GENIS",
+    "team": "Amateur B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DER.",
+    "number": 6
+  },
+  {
+    "id": "p094",
+    "name": "VICTOR RIPOLL CASTILLO",
+    "team": "Amateur B",
+    "pos": "DEL",
+    "originalPosition": "PUNTA",
+    "number": null
+  },
+  {
+    "id": "p095",
+    "name": "AGUAYO LACHICA, ANTÒNIA",
+    "team": "Amateur Fem A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 11
+  },
+  {
+    "id": "p096",
+    "name": "ALBANELL BERNAT, CARLOTA",
+    "team": "Amateur Fem A",
+    "pos": "DEL",
+    "originalPosition": "PUNTA",
+    "number": 23
+  },
+  {
+    "id": "p097",
+    "name": "BAJO AMBRÓS, LAIA",
+    "team": "Amateur Fem A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 25
+  },
+  {
+    "id": "p098",
+    "name": "BARO GONZALEZ, MIREIA",
+    "team": "Amateur Fem A",
+    "pos": "DEL",
+    "originalPosition": "DELANTERA",
+    "number": 7
+  },
+  {
+    "id": "p099",
+    "name": "BLANQUÉ FONT, MARIA",
+    "team": "Amateur Fem A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 18
+  },
+  {
+    "id": "p100",
+    "name": "CATALA DIAZ, CARLA",
+    "team": "Amateur Fem A",
+    "pos": "MED",
+    "originalPosition": "PIVOTE",
+    "number": 17
+  },
+  {
+    "id": "p101",
+    "name": "CERVELLÓ MARQUÈS, INGRID",
+    "team": "Amateur Fem A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 5
+  },
+  {
+    "id": "p102",
+    "name": "DEL VALLE TRISTANY, BLANCA",
+    "team": "Amateur Fem A",
+    "pos": "POR",
+    "originalPosition": "PORTERA",
+    "number": 13
+  },
+  {
+    "id": "p103",
+    "name": "GOMEZ BATET, ANNA",
+    "team": "Amateur Fem A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 3
+  },
+  {
+    "id": "p104",
+    "name": "MARTINEZ EL ABBASSI, SARA",
+    "team": "Amateur Fem A",
+    "pos": "MED",
+    "originalPosition": "MEDIAPUNTA",
+    "number": 8
+  },
+  {
+    "id": "p105",
+    "name": "MEDINA PEREZ, CORAL",
+    "team": "Amateur Fem A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 6
+  },
+  {
+    "id": "p106",
+    "name": "MOLINA MUÑOZ, YAIZA",
+    "team": "Amateur Fem A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 19
+  },
+  {
+    "id": "p107",
+    "name": "NAVARRETE PARDO, CARLA",
+    "team": "Amateur Fem A",
+    "pos": "POR",
+    "originalPosition": "PORTERA",
+    "number": 1
+  },
+  {
+    "id": "p108",
+    "name": "PEREZ DOMINGO, CLAUDIA",
+    "team": "Amateur Fem A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 22
+  },
+  {
+    "id": "p109",
+    "name": "SALMON DIANA, SANDRA",
+    "team": "Amateur Fem A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DERECHO",
+    "number": 9
+  },
+  {
+    "id": "p110",
+    "name": "SANCHEZ PUERTAS, ELIA",
+    "team": "Amateur Fem A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 2
+  },
+  {
+    "id": "p111",
+    "name": "SANCHO LOPEZ, LEYRE",
+    "team": "Amateur Fem A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL IZQUIERDO",
+    "number": 12
+  },
+  {
+    "id": "p112",
+    "name": "SORIANO GERIZ, NÚRIA",
+    "team": "Amateur Fem A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 4
+  },
+  {
+    "id": "p113",
+    "name": "Simon, Emma",
+    "team": "Amateur Fem A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 14
+  },
+  {
+    "id": "p114",
+    "name": "URGELES QUINTERO, GISEL",
+    "team": "Amateur Fem A",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 10
+  },
+  {
+    "id": "p115",
+    "name": "URGELES QUINTERO, JUDIT",
+    "team": "Amateur Fem A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 21
+  },
+  {
+    "id": "p116",
+    "name": "ALBA SANCHEZ, VALERIA",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Central ",
+    "number": 26
+  },
+  {
+    "id": "p117",
+    "name": "BAZ QUERALTÓ, ALBA JIA",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Lateral / extremo ",
+    "number": 3
+  },
+  {
+    "id": "p118",
+    "name": "BUJELLA BUENO, CLARA",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Lateral ",
+    "number": 21
+  },
+  {
+    "id": "p119",
+    "name": "CALVO MALO, JUDIT",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Lateral ",
+    "number": 2
+  },
+  {
+    "id": "p120",
+    "name": "CANTILLO CIVICO, VIRGINIA",
+    "team": "Amateur Fem B",
+    "pos": "DEL",
+    "originalPosition": "Delantero ",
+    "number": 18
+  },
+  {
+    "id": "p121",
+    "name": "CLARAMBO SIERRA, ARIADNA",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Central ",
+    "number": 5
+  },
+  {
+    "id": "p122",
+    "name": "DIAZ BURGOS, AROA",
+    "team": "Amateur Fem B",
+    "pos": "MED",
+    "originalPosition": "Interior ",
+    "number": 20
+  },
+  {
+    "id": "p123",
+    "name": "DOMENECH CORTES, GISELA",
+    "team": "Amateur Fem B",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 8
+  },
+  {
+    "id": "p124",
+    "name": "FERNANDEZ ESTUDILLO, ALBA",
+    "team": "Amateur Fem B",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 24
+  },
+  {
+    "id": "p125",
+    "name": "GARCIA LUCHA, PAULA",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 4
+  },
+  {
+    "id": "p126",
+    "name": "GINABREDA DELGADO, PAULA",
+    "team": "Amateur Fem B",
+    "pos": "DEL",
+    "originalPosition": "Extremo ",
+    "number": 9
+  },
+  {
+    "id": "p127",
+    "name": "GINER CARRASCULL, SILVIA",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Lateral/central ",
+    "number": 14
+  },
+  {
+    "id": "p128",
+    "name": "HERNANDEZ GISBERT, KARLA",
+    "team": "Amateur Fem B",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 17
+  },
+  {
+    "id": "p129",
+    "name": "IVET VILANOVA MEROÑO",
+    "team": "Amateur Fem B",
+    "pos": "POR",
+    "originalPosition": "PORTERA ",
+    "number": 1
+  },
+  {
+    "id": "p130",
+    "name": "LERIN PRIETO, ALESSANDRO",
+    "team": "Amateur Fem B",
+    "pos": "DEL",
+    "originalPosition": "Extremo ",
+    "number": 22
+  },
+  {
+    "id": "p131",
+    "name": "MORALES SANCHEZ, CRISTINA",
+    "team": "Amateur Fem B",
+    "pos": "DEL",
+    "originalPosition": "Delantero ",
+    "number": 11
+  },
+  {
+    "id": "p132",
+    "name": "NURIA ALBARRAN",
+    "team": "Amateur Fem B",
+    "pos": "MED",
+    "originalPosition": "Medio ",
+    "number": null
+  },
+  {
+    "id": "p133",
+    "name": "ORTIZ NAVARRO, JUDITH",
+    "team": "Amateur Fem B",
+    "pos": "DEL",
+    "originalPosition": "Extremo ",
+    "number": 19
+  },
+  {
+    "id": "p134",
+    "name": "REDONDO MONTOYA, LUCIA",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Lateral / extremo ",
+    "number": 7
+  },
+  {
+    "id": "p135",
+    "name": "REDÓN CAMPOS, AINHOA",
+    "team": "Amateur Fem B",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 15
+  },
+  {
+    "id": "p136",
+    "name": "REINA TOMICO, ISABEL",
+    "team": "Amateur Fem B",
+    "pos": "MED",
+    "originalPosition": "Pivote ",
+    "number": 6
+  },
+  {
+    "id": "p137",
+    "name": "RODRIGUEZ ALONSO, ANDREA",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Extremo /lateral ",
+    "number": 23
+  },
+  {
+    "id": "p138",
+    "name": "SANTAEUGENIA SOLA, YEDITH",
+    "team": "Amateur Fem B",
+    "pos": "DEF",
+    "originalPosition": "Lateral ",
+    "number": 16
+  },
+  {
+    "id": "p139",
+    "name": "VIVANCOS CLAVERAS, PAULA",
+    "team": "Amateur Fem B",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 12
+  },
+  {
+    "id": "p140",
+    "name": "YANIRA",
+    "team": "Amateur Fem B",
+    "pos": "DEL",
+    "originalPosition": "Extremo ",
+    "number": 10
+  },
+  {
+    "id": "p141",
+    "name": "ANDRES CEPEDA",
+    "team": "Benjamín S10 A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": null
+  },
+  {
+    "id": "p142",
+    "name": "ASENSIO MONTEJANO, ALVARO",
+    "team": "Benjamín S10 A",
+    "pos": "DEF",
+    "originalPosition": "central",
+    "number": null
+  },
+  {
+    "id": "p143",
+    "name": "BUIZA AGUILAR, ALEJANDRO",
+    "team": "Benjamín S10 A",
+    "pos": "POR",
+    "originalPosition": "portero",
+    "number": null
+  },
+  {
+    "id": "p144",
+    "name": "CAMPS MAHALEAN, ARNAU",
+    "team": "Benjamín S10 A",
+    "pos": "DEF",
+    "originalPosition": "central",
+    "number": null
+  },
+  {
+    "id": "p145",
+    "name": "JARA BAQUE, AITOR EMANUEL",
+    "team": "Benjamín S10 A",
+    "pos": "DEF",
+    "originalPosition": "carrilero",
+    "number": null
+  },
+  {
+    "id": "p146",
+    "name": "JIMENEZ SAN VICTORINO, DARÍO",
+    "team": "Benjamín S10 A",
+    "pos": "DEL",
+    "originalPosition": "delantero",
+    "number": null
+  },
+  {
+    "id": "p147",
+    "name": "LEE LARA, NOAH",
+    "team": "Benjamín S10 A",
+    "pos": "POR",
+    "originalPosition": "portero",
+    "number": null
+  },
+  {
+    "id": "p148",
+    "name": "MARTINEZ VALVERDE, THEO",
+    "team": "Benjamín S10 A",
+    "pos": "DEF",
+    "originalPosition": "carrilero",
+    "number": null
+  },
+  {
+    "id": "p149",
+    "name": "MATEO HERNANDEZ",
+    "team": "Benjamín S10 A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": null
+  },
+  {
+    "id": "p150",
+    "name": "MORANTE ARJONA, JULEN",
+    "team": "Benjamín S10 A",
+    "pos": "DEL",
+    "originalPosition": "delantero",
+    "number": null
+  },
+  {
+    "id": "p151",
+    "name": "RODRIGUEZ HUNGRIA, MAX",
+    "team": "Benjamín S10 A",
+    "pos": "MED",
+    "originalPosition": "medio",
+    "number": null
+  },
+  {
+    "id": "p152",
+    "name": "VENDRELL FERNANDEZ, MARC",
+    "team": "Benjamín S10 A",
+    "pos": "DEF",
+    "originalPosition": "carrilero",
+    "number": null
+  },
+  {
+    "id": "p153",
+    "name": "ALMA",
+    "team": "Benjamín S9 A",
+    "pos": "DEL",
+    "originalPosition": "Delantero",
+    "number": 14
+  },
+  {
+    "id": "p154",
+    "name": "FARRÉ CERANTOLA, MATTEO",
+    "team": "Benjamín S9 A",
+    "pos": "DEF",
+    "originalPosition": "Defensa",
+    "number": 8
+  },
+  {
+    "id": "p155",
+    "name": "JOHAN",
+    "team": "Benjamín S9 A",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p156",
+    "name": "MARIA",
+    "team": "Benjamín S9 A",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p157",
+    "name": "MARTINEZ PEREZ, ALAN",
+    "team": "Benjamín S9 A",
+    "pos": "MED",
+    "originalPosition": "Medio/Banda",
+    "number": 10
+  },
+  {
+    "id": "p158",
+    "name": "NAVARRO MARTIN, ANGEL JOSE",
+    "team": "Benjamín S9 A",
+    "pos": "POR",
+    "originalPosition": "Portero",
+    "number": 1
+  },
+  {
+    "id": "p159",
+    "name": "QUISPE HUARCAYA, IÑAKI JOSEP",
+    "team": "Benjamín S9 A",
+    "pos": "DEL",
+    "originalPosition": "Banda",
+    "number": 7
+  },
+  {
+    "id": "p160",
+    "name": "RACHI RACHI, SAFOUANE",
+    "team": "Benjamín S9 A",
+    "pos": "MED",
+    "originalPosition": "Banda/Medio",
+    "number": 16
+  },
+  {
+    "id": "p161",
+    "name": "RIVERA HERNANDEZ, MARTIN",
+    "team": "Benjamín S9 A",
+    "pos": "DEL",
+    "originalPosition": "Banda/ Delantero",
+    "number": 9
+  },
+  {
+    "id": "p162",
+    "name": "RUIZ MARTINEZ, VALERIA",
+    "team": "Benjamín S9 A",
+    "pos": "DEL",
+    "originalPosition": "Delantera",
+    "number": 11
+  },
+  {
+    "id": "p163",
+    "name": "SANTOS SIGURET, LEONARDO",
+    "team": "Benjamín S9 A",
+    "pos": "DEL",
+    "originalPosition": "Banda",
+    "number": 6
+  },
+  {
+    "id": "p164",
+    "name": "ALMEDINA GARCIA, VICTOR",
+    "team": "Cadete S15",
+    "pos": "MED",
+    "originalPosition": "Centrocampista",
+    "number": 9
+  },
+  {
+    "id": "p165",
+    "name": "ARTEAGA VARGAS, EDUARDO",
+    "team": "Cadete S15",
+    "pos": "DEL",
+    "originalPosition": "Delantero",
+    "number": 21
+  },
+  {
+    "id": "p166",
+    "name": "AVALOS CABALLERO, DYLAN JOSE MARIA",
+    "team": "Cadete S15",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 3
+  },
+  {
+    "id": "p167",
+    "name": "AYALA MARTIN, ISAAC",
+    "team": "Cadete S15",
+    "pos": "MED",
+    "originalPosition": "Centrocampista",
+    "number": 5
+  },
+  {
+    "id": "p168",
+    "name": "BERLANGA ANAYA, IVAN",
+    "team": "Cadete S15",
+    "pos": "DEL",
+    "originalPosition": "Delantero",
+    "number": 17
+  },
+  {
+    "id": "p169",
+    "name": "COELLO GARCIA, DEREK ALEXANDER",
+    "team": "Cadete S15",
+    "pos": "POR",
+    "originalPosition": "Portero",
+    "number": 13
+  },
+  {
+    "id": "p170",
+    "name": "GALVEZ LAARBI BEN, RAFA",
+    "team": "Cadete S15",
+    "pos": "DEL",
+    "originalPosition": "Extremo",
+    "number": 7
+  },
+  {
+    "id": "p171",
+    "name": "GARCIA MARTINEZ, JUAN DIEGO",
+    "team": "Cadete S15",
+    "pos": "MED",
+    "originalPosition": "Centrocampista",
+    "number": 8
+  },
+  {
+    "id": "p172",
+    "name": "GARCIA MARTINEZ, LIONEL",
+    "team": "Cadete S15",
+    "pos": "DEL",
+    "originalPosition": "Extremo",
+    "number": 10
+  },
+  {
+    "id": "p173",
+    "name": "HIDALGO PEREZ, BIEL",
+    "team": "Cadete S15",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 4
+  },
+  {
+    "id": "p174",
+    "name": "IKISS FAIZ, AMIN",
+    "team": "Cadete S15",
+    "pos": "DEF",
+    "originalPosition": "Lateral",
+    "number": 11
+  },
+  {
+    "id": "p175",
+    "name": "MORILLA RODRIGUEZ, POL",
+    "team": "Cadete S15",
+    "pos": "POR",
+    "originalPosition": "Portero",
+    "number": 1
+  },
+  {
+    "id": "p176",
+    "name": "QUIRÓS VILCHEZ, IKER",
+    "team": "Cadete S15",
+    "pos": "DEF",
+    "originalPosition": "Lateral",
+    "number": 19
+  },
+  {
+    "id": "p177",
+    "name": "RIBOT CHACÓN, BIEL",
+    "team": "Cadete S15",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 2
+  },
+  {
+    "id": "p178",
+    "name": "BERTA SIO",
+    "team": "Genuino Blau",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": 34
+  },
+  {
+    "id": "p179",
+    "name": "CARLOS KOURDACI",
+    "team": "Genuino Blau",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": 7
+  },
+  {
+    "id": "p180",
+    "name": "CRISTO ORTEGA",
+    "team": "Genuino Blau",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 6
+  },
+  {
+    "id": "p181",
+    "name": "ERIC AMADOR",
+    "team": "Genuino Blau",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 30
+  },
+  {
+    "id": "p182",
+    "name": "JORGE VALERA",
+    "team": "Genuino Blau",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 10
+  },
+  {
+    "id": "p183",
+    "name": "JUAN ARRIBA",
+    "team": "Genuino Blau",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 12
+  },
+  {
+    "id": "p184",
+    "name": "MANUEL NAVAS",
+    "team": "Genuino Blau",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 13
+  },
+  {
+    "id": "p185",
+    "name": "MARC HERRERA",
+    "team": "Genuino Blau",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 8
+  },
+  {
+    "id": "p186",
+    "name": "SERGI JULIA",
+    "team": "Genuino Blau",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 3
+  },
+  {
+    "id": "p187",
+    "name": "SERGIO AGUILAR",
+    "team": "Genuino Blau",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 31
+  },
+  {
+    "id": "p188",
+    "name": "ARIAN SANCHEZ",
+    "team": "Genuino Grana",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 20
+  },
+  {
+    "id": "p189",
+    "name": "DANIEL VILA",
+    "team": "Genuino Grana",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 1
+  },
+  {
+    "id": "p190",
+    "name": "ERIC CLAUDIO",
+    "team": "Genuino Grana",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 17
+  },
+  {
+    "id": "p191",
+    "name": "HUGO ABELLO",
+    "team": "Genuino Grana",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 4
+  },
+  {
+    "id": "p192",
+    "name": "IZAN BAIGET",
+    "team": "Genuino Grana",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 32
+  },
+  {
+    "id": "p193",
+    "name": "JAVI MARTIN",
+    "team": "Genuino Grana",
+    "pos": "DEL",
+    "originalPosition": "DELANTARO",
+    "number": 9
+  },
+  {
+    "id": "p194",
+    "name": "MARC GRANADOS",
+    "team": "Genuino Grana",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 18
+  },
+  {
+    "id": "p195",
+    "name": "PEDRO GARCIA",
+    "team": "Genuino Grana",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 11
+  },
+  {
+    "id": "p196",
+    "name": "RUBEN MATAMORO",
+    "team": "Genuino Grana",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 25
+  },
+  {
+    "id": "p197",
+    "name": "ALBERT MARFIL",
+    "team": "Genuino Groc",
+    "pos": "MED",
+    "originalPosition": "DEFEENSA",
+    "number": 27
+  },
+  {
+    "id": "p198",
+    "name": "ALBERT QUILES",
+    "team": "Genuino Groc",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": 15
+  },
+  {
+    "id": "p199",
+    "name": "ALEX CANO",
+    "team": "Genuino Groc",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": null
+  },
+  {
+    "id": "p200",
+    "name": "ALEX VICO",
+    "team": "Genuino Groc",
+    "pos": "DEL",
+    "originalPosition": "DELENTERO",
+    "number": 2
+  },
+  {
+    "id": "p201",
+    "name": "CARLO COLLADO",
+    "team": "Genuino Groc",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": null
+  },
+  {
+    "id": "p202",
+    "name": "FERRAN PAGES",
+    "team": "Genuino Groc",
+    "pos": "MED",
+    "originalPosition": "DEFEENSA",
+    "number": 24
+  },
+  {
+    "id": "p203",
+    "name": "IZAN DOMINGUEZ",
+    "team": "Genuino Groc",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": null
+  },
+  {
+    "id": "p204",
+    "name": "MIGUEL ANGEL MURILLO",
+    "team": "Genuino Groc",
+    "pos": "MED",
+    "originalPosition": "DEFEENSA",
+    "number": 14
+  },
+  {
+    "id": "p205",
+    "name": "SANTI MATAMOROS",
+    "team": "Genuino Groc",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 28
+  },
+  {
+    "id": "p206",
+    "name": "AINOHA",
+    "team": "Genuino Taronja",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": null
+  },
+  {
+    "id": "p207",
+    "name": "ALBERT ROMERO",
+    "team": "Genuino Taronja",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 33
+  },
+  {
+    "id": "p208",
+    "name": "ALBERTO RODRIGUEZ",
+    "team": "Genuino Taronja",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 19
+  },
+  {
+    "id": "p209",
+    "name": "DABO THIERNO",
+    "team": "Genuino Taronja",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 21
+  },
+  {
+    "id": "p210",
+    "name": "DAMIÀ SEGURA",
+    "team": "Genuino Taronja",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 5
+  },
+  {
+    "id": "p211",
+    "name": "HUGO NAVARRO",
+    "team": "Genuino Taronja",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 34
+  },
+  {
+    "id": "p212",
+    "name": "IZAN BARRAGAN",
+    "team": "Genuino Taronja",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 37
+  },
+  {
+    "id": "p213",
+    "name": "JONATHAN VELÁSQUES",
+    "team": "Genuino Taronja",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 22
+  },
+  {
+    "id": "p214",
+    "name": "MARIO FLORES",
+    "team": "Genuino Taronja",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 22
+  },
+  {
+    "id": "p215",
+    "name": "MARTÍ AMBROJO",
+    "team": "Genuino Taronja",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": null
+  },
+  {
+    "id": "p216",
+    "name": "PIERRE GUILLOU",
+    "team": "Genuino Taronja",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 16
+  },
+  {
+    "id": "p217",
+    "name": "UZIEL ESPINO",
+    "team": "Genuino Taronja",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 25
+  },
+  {
+    "id": "p218",
+    "name": "ARTEAGA URRUTIA, IRIS",
+    "team": "Infantil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Central derecho ",
+    "number": 4
+  },
+  {
+    "id": "p219",
+    "name": "BERLANGA ANAYA, MARTINA",
+    "team": "Infantil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Lateral izquierdo ",
+    "number": 11
+  },
+  {
+    "id": "p220",
+    "name": "GONZALEZ ARIAS, AINARA",
+    "team": "Infantil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Lateral derecho ",
+    "number": 14
+  },
+  {
+    "id": "p221",
+    "name": "HERNÁNDEZ MÉNDEZ, ALBA",
+    "team": "Infantil Fem A",
+    "pos": "DEL",
+    "originalPosition": "Delantera ",
+    "number": null
+  },
+  {
+    "id": "p222",
+    "name": "MERINO MARTINEZ, LEYRE",
+    "team": "Infantil Fem A",
+    "pos": "DEL",
+    "originalPosition": "Delantera ",
+    "number": 10
+  },
+  {
+    "id": "p223",
+    "name": "MORA AMADOR, AINHOA",
+    "team": "Infantil Fem A",
+    "pos": "POR",
+    "originalPosition": "Portera ",
+    "number": 1
+  },
+  {
+    "id": "p224",
+    "name": "PAZOS VALERO, ALBA",
+    "team": "Infantil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Central / Medio ",
+    "number": 18
+  },
+  {
+    "id": "p225",
+    "name": "REYES RODRIGUEZ, DANIELA",
+    "team": "Infantil Fem A",
+    "pos": "DEL",
+    "originalPosition": "Delantera ",
+    "number": 2
+  },
+  {
+    "id": "p226",
+    "name": "VILANOVA MEROÑO, VALENTINA",
+    "team": "Infantil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Central medio ",
+    "number": 8
+  },
+  {
+    "id": "p227",
+    "name": "BRUNA LOPEZ, PABLO",
+    "team": "Infantil S13",
+    "pos": "MED",
+    "originalPosition": "MEDIA PUNTA",
+    "number": 9
+  },
+  {
+    "id": "p228",
+    "name": "CUBA PAUCAR, THIAGO ALONSO",
+    "team": "Infantil S13",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 77
+  },
+  {
+    "id": "p229",
+    "name": "GONZALEZ SERRAN, ARES",
+    "team": "Infantil S13",
+    "pos": "MED",
+    "originalPosition": "MEDIO CENTRO",
+    "number": 4
+  },
+  {
+    "id": "p230",
+    "name": "GÜIZ RAMONEDA, JAN",
+    "team": "Infantil S13",
+    "pos": "MED",
+    "originalPosition": "MEDIO CENTRO",
+    "number": 21
+  },
+  {
+    "id": "p231",
+    "name": "JARA BAQUE, JORGE JONAS",
+    "team": "Infantil S13",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 18
+  },
+  {
+    "id": "p232",
+    "name": "LÓPEZ SANTAMARÍA, ADRIÁN",
+    "team": "Infantil S13",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 2
+  },
+  {
+    "id": "p233",
+    "name": "MAQUEDA MORILLAS, AXEL",
+    "team": "Infantil S13",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO IZQ",
+    "number": 7
+  },
+  {
+    "id": "p234",
+    "name": "MARTIN SALINAS, DAVID",
+    "team": "Infantil S13",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO DER",
+    "number": 15
+  },
+  {
+    "id": "p235",
+    "name": "MARTINEZ LLORENTE, MARC",
+    "team": "Infantil S13",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 1
+  },
+  {
+    "id": "p236",
+    "name": "MARTINEZ PEREZ, ANTONIO",
+    "team": "Infantil S13",
+    "pos": "DEF",
+    "originalPosition": "LATERAL / MEDIO CENTRO",
+    "number": 10
+  },
+  {
+    "id": "p237",
+    "name": "MOJICA LIZARAZO, SERGIO ANDRES",
+    "team": "Infantil S13",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO DERECHO",
+    "number": 12
+  },
+  {
+    "id": "p238",
+    "name": "MONSERRATE OSORIO, ERIC",
+    "team": "Infantil S13",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO DERECHO",
+    "number": 11
+  },
+  {
+    "id": "p239",
+    "name": "MORENO HERNANDEZ, THIAGO",
+    "team": "Infantil S13",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO CENTRO",
+    "number": 21
+  },
+  {
+    "id": "p240",
+    "name": "PLAZA GONZALEZ, HECTOR",
+    "team": "Infantil S13",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA CENTRAL",
+    "number": 8
+  },
+  {
+    "id": "p241",
+    "name": "SANCHEZ DOMINGUEZ, ERIK",
+    "team": "Infantil S13",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 31
+  },
+  {
+    "id": "p242",
+    "name": "VILANOVA MEROÑO, NIL",
+    "team": "Infantil S13",
+    "pos": "MED",
+    "originalPosition": "MEDIO CENTRO",
+    "number": 17
+  },
+  {
+    "id": "p243",
+    "name": "ALONSO PIQUÉ, ARNAU",
+    "team": "Infantil S14",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 3
+  },
+  {
+    "id": "p244",
+    "name": "BIEGUNOV YAROVA, NIKITA",
+    "team": "Infantil S14",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": 15
+  },
+  {
+    "id": "p245",
+    "name": "CABALLERIA BUSTOS, NACHO",
+    "team": "Infantil S14",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DERECHO",
+    "number": 14
+  },
+  {
+    "id": "p246",
+    "name": "CABAÑAS PAGES, ROC",
+    "team": "Infantil S14",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO DERECHO",
+    "number": 7
+  },
+  {
+    "id": "p247",
+    "name": "CARDONA CARO, JUAN MANUEL",
+    "team": "Infantil S14",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 23
+  },
+  {
+    "id": "p248",
+    "name": "CESAR TARANCON, JON",
+    "team": "Infantil S14",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO CENTRO",
+    "number": 29
+  },
+  {
+    "id": "p249",
+    "name": "CHICA CAMINALS, ADRIÀ",
+    "team": "Infantil S14",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO DERECHO",
+    "number": 11
+  },
+  {
+    "id": "p250",
+    "name": "CLERICH BARREDO, JOEL",
+    "team": "Infantil S14",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 8
+  },
+  {
+    "id": "p251",
+    "name": "DIAZ ROCA, BIEL",
+    "team": "Infantil S14",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 4
+  },
+  {
+    "id": "p252",
+    "name": "FERNANDEZ AGUILERA, BRUNO",
+    "team": "Infantil S14",
+    "pos": "DEF",
+    "originalPosition": "LATERAL IZQUIEDO",
+    "number": 2
+  },
+  {
+    "id": "p253",
+    "name": "GONZALEZ BELLAHNA, YUSEF",
+    "team": "Infantil S14",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA CENTRAL",
+    "number": 16
+  },
+  {
+    "id": "p254",
+    "name": "GUTIERREZ GONZALEZ, ALEJANDRO",
+    "team": "Infantil S14",
+    "pos": "MED",
+    "originalPosition": "PIVOTE",
+    "number": 5
+  },
+  {
+    "id": "p255",
+    "name": "LASA FALZETTA, MATIAS",
+    "team": "Infantil S14",
+    "pos": "MED",
+    "originalPosition": "MEDIAPUNTA",
+    "number": 19
+  },
+  {
+    "id": "p256",
+    "name": "MORENO ORDÓÑEZ, SIMÓN",
+    "team": "Infantil S14",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 13
+  },
+  {
+    "id": "p257",
+    "name": "PRIU RUBIO, HUGO",
+    "team": "Infantil S14",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO IZQUIERDO",
+    "number": 10
+  },
+  {
+    "id": "p258",
+    "name": "RIOS ROSARIO, ADRIAN",
+    "team": "Infantil S14",
+    "pos": "DEL",
+    "originalPosition": "PUNTA",
+    "number": 9
+  },
+  {
+    "id": "p259",
+    "name": "ROYUELA GONZALVES, JOAN",
+    "team": "Infantil S14",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL/LATERAL",
+    "number": 22
+  },
+  {
+    "id": "p260",
+    "name": "SOLANAS DEU, LLUC",
+    "team": "Infantil S14",
+    "pos": "MED",
+    "originalPosition": "DE LO QUE QUIERAS, VA EN PELOTAS",
+    "number": 20
+  },
+  {
+    "id": "p261",
+    "name": "VAQUERA HERRERA, ARON",
+    "team": "Infantil S14",
+    "pos": "MED",
+    "originalPosition": "MEDIAPUNTA",
+    "number": 12
+  },
+  {
+    "id": "p262",
+    "name": "VARGAS ANTELO, DYLAN",
+    "team": "Infantil S14",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA CENTRAL",
+    "number": 6
+  },
+  {
+    "id": "p263",
+    "name": "ARTEAGA URRUTIA, WALTER SAUL",
+    "team": "Juvenil A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 10
+  },
+  {
+    "id": "p264",
+    "name": "BAÑOL SOTO, POL ESTEBAN",
+    "team": "Juvenil A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 24
+  },
+  {
+    "id": "p265",
+    "name": "CLAJER GONZALO, JORDI",
+    "team": "Juvenil A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 19
+  },
+  {
+    "id": "p266",
+    "name": "ESCUTE MARTINEZ, MARC",
+    "team": "Juvenil A",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": 67
+  },
+  {
+    "id": "p267",
+    "name": "GARCIA REINA, IKER",
+    "team": "Juvenil A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 17
+  },
+  {
+    "id": "p268",
+    "name": "GONZÁLEZ BELLAHNA, YASER",
+    "team": "Juvenil A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL",
+    "number": 6
+  },
+  {
+    "id": "p269",
+    "name": "LOPEZ GAMARRA, FELIX GERARD",
+    "team": "Juvenil A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 11
+  },
+  {
+    "id": "p270",
+    "name": "LOPEZ MARTINEZ, VICTOR",
+    "team": "Juvenil A",
+    "pos": "MED",
+    "originalPosition": "MEDIA PUNTA",
+    "number": 20
+  },
+  {
+    "id": "p271",
+    "name": "LOPEZ QUESADA, HUGO",
+    "team": "Juvenil A",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": 7
+  },
+  {
+    "id": "p272",
+    "name": "LÓPEZ PÉREZ, MARCOS",
+    "team": "Juvenil A",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 77
+  },
+  {
+    "id": "p273",
+    "name": "MANJON CARDENAS, PABLO",
+    "team": "Juvenil A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 15
+  },
+  {
+    "id": "p274",
+    "name": "MARTINEZ GOMEZ, IZAN",
+    "team": "Juvenil A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 8
+  },
+  {
+    "id": "p275",
+    "name": "MONTERO BAÑOS, DANIEL",
+    "team": "Juvenil A",
+    "pos": "DEL",
+    "originalPosition": "PUNTA",
+    "number": 9
+  },
+  {
+    "id": "p276",
+    "name": "MOSCOSO MARTINEZ, RUBEN",
+    "team": "Juvenil A",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 13
+  },
+  {
+    "id": "p277",
+    "name": "MUÑOZ RAGA, JOEL",
+    "team": "Juvenil A",
+    "pos": "MED",
+    "originalPosition": "MEDIO",
+    "number": 5
+  },
+  {
+    "id": "p278",
+    "name": "MUÑOZ SANCHEZ, PABLO",
+    "team": "Juvenil A",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 1
+  },
+  {
+    "id": "p279",
+    "name": "RACHIK, ADAM",
+    "team": "Juvenil A",
+    "pos": "MED",
+    "originalPosition": "MEDIA PUNTA",
+    "number": 18
+  },
+  {
+    "id": "p280",
+    "name": "RUA GONZALEZ, SERGI",
+    "team": "Juvenil A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL/PIVOTE",
+    "number": 22
+  },
+  {
+    "id": "p281",
+    "name": "TORRECILLAS PEREZ, ALVARO",
+    "team": "Juvenil A",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 14
+  },
+  {
+    "id": "p282",
+    "name": "VARON OLLE, ALEIX",
+    "team": "Juvenil A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL ",
+    "number": 3
+  },
+  {
+    "id": "p283",
+    "name": "AYALA MARTÍN, SAÜL",
+    "team": "Juvenil B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DERECHO",
+    "number": 19
+  },
+  {
+    "id": "p284",
+    "name": "BARCELO CASASAMPERE, ALEIX",
+    "team": "Juvenil B",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 9
+  },
+  {
+    "id": "p285",
+    "name": "BARRAGAN QUESADA, SAMUEL",
+    "team": "Juvenil B",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 8
+  },
+  {
+    "id": "p286",
+    "name": "BOLOIX SANTALIESTRA, GERARD",
+    "team": "Juvenil B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DERECHO",
+    "number": 12
+  },
+  {
+    "id": "p287",
+    "name": "BOUHLASS BOUHLASS, ISMAEL",
+    "team": "Juvenil B",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 7
+  },
+  {
+    "id": "p288",
+    "name": "BUCKENS TRONCOSO, IKER",
+    "team": "Juvenil B",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 14
+  },
+  {
+    "id": "p289",
+    "name": "CAMPOS DEL BARRIO, ALEJANDRO",
+    "team": "Juvenil B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL IZQUIERDO",
+    "number": 25
+  },
+  {
+    "id": "p290",
+    "name": "CARRASCOSA GINES, ERIC",
+    "team": "Juvenil B",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 6
+  },
+  {
+    "id": "p291",
+    "name": "DIEGO MORALO",
+    "team": "Juvenil B",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 99
+  },
+  {
+    "id": "p292",
+    "name": "GARCIA JURA, DANIEL",
+    "team": "Juvenil B",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 4
+  },
+  {
+    "id": "p293",
+    "name": "GARCÍA MARTÍNEZ, LEO",
+    "team": "Juvenil B",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 3
+  },
+  {
+    "id": "p294",
+    "name": "JIMENEZ PRAT, FELIX",
+    "team": "Juvenil B",
+    "pos": "MED",
+    "originalPosition": "MEDIAPUNTA",
+    "number": 11
+  },
+  {
+    "id": "p295",
+    "name": "MACHROH LIDALT, YOUSSAD",
+    "team": "Juvenil B",
+    "pos": "DEL",
+    "originalPosition": "EXTREMO",
+    "number": 16
+  },
+  {
+    "id": "p296",
+    "name": "MATEOS DIAZ, JESUS",
+    "team": "Juvenil B",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 5
+  },
+  {
+    "id": "p297",
+    "name": "MATEOS DIAZ, LLUIS",
+    "team": "Juvenil B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL IZQUIERDO",
+    "number": 2
+  },
+  {
+    "id": "p298",
+    "name": "NOEL PANADES, MARC",
+    "team": "Juvenil B",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 1
+  },
+  {
+    "id": "p299",
+    "name": "PEREZ CASTELLNOU, MIQUEL",
+    "team": "Juvenil B",
+    "pos": "DEF",
+    "originalPosition": "CENTRAL",
+    "number": 69
+  },
+  {
+    "id": "p300",
+    "name": "RODRIGUEZ MANZANO, SERGI",
+    "team": "Juvenil B",
+    "pos": "DEF",
+    "originalPosition": "LATERAL DERECHO",
+    "number": 10
+  },
+  {
+    "id": "p301",
+    "name": "SANTIAGO GARCIA SALAMANCA",
+    "team": "Juvenil B",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 15
+  },
+  {
+    "id": "p302",
+    "name": "TINOCO AMADOR, MIGUEL ANGEL",
+    "team": "Juvenil B",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 67
+  },
+  {
+    "id": "p303",
+    "name": "TIZADO JIMENEZ, NIKO",
+    "team": "Juvenil B",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 13
+  },
+  {
+    "id": "p304",
+    "name": "BERNIER MONTALBAN, TONI",
+    "team": "Juvenil C",
+    "pos": "MED",
+    "originalPosition": "Pivote/Media Punta",
+    "number": 6
+  },
+  {
+    "id": "p305",
+    "name": "CANTARERO COSTA, ERIK",
+    "team": "Juvenil C",
+    "pos": "DEF",
+    "originalPosition": "Lateral/Media Punta",
+    "number": 12
+  },
+  {
+    "id": "p306",
+    "name": "ENCINA PAIVA, MISAEL",
+    "team": "Juvenil C",
+    "pos": "DEL",
+    "originalPosition": "Extremo/Delantero ",
+    "number": 19
+  },
+  {
+    "id": "p307",
+    "name": "GARCÍA TORRECILLAS, POL",
+    "team": "Juvenil C",
+    "pos": "DEL",
+    "originalPosition": "Extremo",
+    "number": 9
+  },
+  {
+    "id": "p308",
+    "name": "GASCON MUÑOZ, HUGO",
+    "team": "Juvenil C",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 3
+  },
+  {
+    "id": "p309",
+    "name": "HERNANDEZ RUIZ, HUGO",
+    "team": "Juvenil C",
+    "pos": "DEL",
+    "originalPosition": "Delantero ",
+    "number": 22
+  },
+  {
+    "id": "p310",
+    "name": "JIN, YANGHAO",
+    "team": "Juvenil C",
+    "pos": "DEF",
+    "originalPosition": "Extremo/Carrilero",
+    "number": 10
+  },
+  {
+    "id": "p311",
+    "name": "MATA LOZANO, JOSE DAVID",
+    "team": "Juvenil C",
+    "pos": "MED",
+    "originalPosition": "Media Punta/Pivote",
+    "number": 7
+  },
+  {
+    "id": "p312",
+    "name": "MAYORAL ALMEDA, ALEX",
+    "team": "Juvenil C",
+    "pos": "DEF",
+    "originalPosition": "Lateral/Extremo",
+    "number": 8
+  },
+  {
+    "id": "p313",
+    "name": "MIR PEREZ, IKER",
+    "team": "Juvenil C",
+    "pos": "DEL",
+    "originalPosition": "Extremo/Delantero",
+    "number": 69
+  },
+  {
+    "id": "p314",
+    "name": "MORALO GORDON, DIEGO",
+    "team": "Juvenil C",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p315",
+    "name": "PALAU MARTÍ, GUERAU",
+    "team": "Juvenil C",
+    "pos": "DEF",
+    "originalPosition": "Lateral/Extremo",
+    "number": 18
+  },
+  {
+    "id": "p316",
+    "name": "PEÑALVER PÉREZ, IZAN",
+    "team": "Juvenil C",
+    "pos": "DEF",
+    "originalPosition": "Central/Lateral ",
+    "number": 5
+  },
+  {
+    "id": "p317",
+    "name": "QUISPE HUARCAYA, NIJHAT SONYU",
+    "team": "Juvenil C",
+    "pos": "DEF",
+    "originalPosition": "Lateral/Central",
+    "number": 4
+  },
+  {
+    "id": "p318",
+    "name": "SEGURA GONZALEZ, JOAN",
+    "team": "Juvenil C",
+    "pos": "DEL",
+    "originalPosition": "Extremo",
+    "number": 14
+  },
+  {
+    "id": "p319",
+    "name": "SEÑOR MONTES, JORGE",
+    "team": "Juvenil C",
+    "pos": "DEF",
+    "originalPosition": "Central/Pivote",
+    "number": 2
+  },
+  {
+    "id": "p320",
+    "name": "VILA CARRANZA, GONZALO",
+    "team": "Juvenil C",
+    "pos": "MED",
+    "originalPosition": "Extremo/Media Punta",
+    "number": 11
+  },
+  {
+    "id": "p321",
+    "name": "ANDRES PLANS, NOA",
+    "team": "Juvenil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Lateral",
+    "number": 22
+  },
+  {
+    "id": "p322",
+    "name": "ARÉVALO SÁNCHEZ, BERTA",
+    "team": "Juvenil Fem A",
+    "pos": "DEL",
+    "originalPosition": "Delantera",
+    "number": 21
+  },
+  {
+    "id": "p323",
+    "name": "BARRERAS DE RIOS, JANA",
+    "team": "Juvenil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 16
+  },
+  {
+    "id": "p324",
+    "name": "CENTELLES CORTES, ROCIO",
+    "team": "Juvenil Fem A",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 20
+  },
+  {
+    "id": "p325",
+    "name": "CENTELLES CORTES, ÁMBAR",
+    "team": "Juvenil Fem A",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 19
+  },
+  {
+    "id": "p326",
+    "name": "DE HARO VALENZUELA, ONA",
+    "team": "Juvenil Fem A",
+    "pos": "POR",
+    "originalPosition": "Portera",
+    "number": 1
+  },
+  {
+    "id": "p327",
+    "name": "FERNANDEZ SOLA, ARIADNA",
+    "team": "Juvenil Fem A",
+    "pos": "DEL",
+    "originalPosition": "Extremo",
+    "number": 8
+  },
+  {
+    "id": "p328",
+    "name": "GIMENEZ BAKHKHAT, AMIRA",
+    "team": "Juvenil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Lateral",
+    "number": 17
+  },
+  {
+    "id": "p329",
+    "name": "GONZALEZ VIUDEZ, NADIA",
+    "team": "Juvenil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Central",
+    "number": 3
+  },
+  {
+    "id": "p330",
+    "name": "GUTIÉRREZ ORTEGA, AITANA",
+    "team": "Juvenil Fem A",
+    "pos": "MED",
+    "originalPosition": "Extremo/medio",
+    "number": 11
+  },
+  {
+    "id": "p331",
+    "name": "HERNANDEZ SANCHEZ, NAIARA",
+    "team": "Juvenil Fem A",
+    "pos": "DEL",
+    "originalPosition": "Extremo",
+    "number": 7
+  },
+  {
+    "id": "p332",
+    "name": "MARTÍNEZ VALLS, VEGA",
+    "team": "Juvenil Fem A",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 14
+  },
+  {
+    "id": "p333",
+    "name": "MATEOS ALCAIDE, GISELA",
+    "team": "Juvenil Fem A",
+    "pos": "POR",
+    "originalPosition": "Portera",
+    "number": 13
+  },
+  {
+    "id": "p334",
+    "name": "PASTOR GALERA, ARIADNA",
+    "team": "Juvenil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Central/lateral/medio",
+    "number": 6
+  },
+  {
+    "id": "p335",
+    "name": "RAMIREZ GARCIA, NAIA",
+    "team": "Juvenil Fem A",
+    "pos": "MED",
+    "originalPosition": "Medio",
+    "number": 5
+  },
+  {
+    "id": "p336",
+    "name": "RODRIGUEZ GONZALEZ, AINHOA",
+    "team": "Juvenil Fem A",
+    "pos": "MED",
+    "originalPosition": "Medio/extremo",
+    "number": 10
+  },
+  {
+    "id": "p337",
+    "name": "RUIZ RIVERA, SOFIA",
+    "team": "Juvenil Fem A",
+    "pos": "DEF",
+    "originalPosition": "Lateral",
+    "number": 12
+  },
+  {
+    "id": "p338",
+    "name": "SANCHEZ HERNANDEZ, MARTA",
+    "team": "Juvenil Fem A",
+    "pos": "MED",
+    "originalPosition": "Delantera/medio",
+    "number": 9
+  },
+  {
+    "id": "p339",
+    "name": "ADRIAN VENIMIR PEKTOV",
+    "team": "Prebenjamín S7 A",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 6
+  },
+  {
+    "id": "p340",
+    "name": "ADRIÀ CASTELLET PRAT",
+    "team": "Prebenjamín S7 A",
+    "pos": "MED",
+    "originalPosition": "MEDIOCENTRO",
+    "number": 8
+  },
+  {
+    "id": "p341",
+    "name": "ALEX CAZORLA RICO",
+    "team": "Prebenjamín S7 A",
+    "pos": "POR",
+    "originalPosition": "PORTERO",
+    "number": 1
+  },
+  {
+    "id": "p342",
+    "name": "ANDER RODRIGUEZ BUENO",
+    "team": "Prebenjamín S7 A",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 2
+  },
+  {
+    "id": "p343",
+    "name": "DANIELA CUADRADO NAVARRO",
+    "team": "Prebenjamín S7 A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL/DELANTERA",
+    "number": 9
+  },
+  {
+    "id": "p344",
+    "name": "FRANCISCO JOSE CRUZ AMAYA",
+    "team": "Prebenjamín S7 A",
+    "pos": "DEF",
+    "originalPosition": "LATERAL/DEFENSA",
+    "number": 10
+  },
+  {
+    "id": "p345",
+    "name": "JESUS SANCHEZ MATEOS",
+    "team": "Prebenjamín S7 A",
+    "pos": "DEL",
+    "originalPosition": "DELANTERO",
+    "number": 7
+  },
+  {
+    "id": "p346",
+    "name": "JOSE AMAR RUIZ",
+    "team": "Prebenjamín S7 A",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p347",
+    "name": "N'GALLO DIAKITE SIDIBE",
+    "team": "Prebenjamín S7 A",
+    "pos": "DEF",
+    "originalPosition": "DELANTERO/LATERAL",
+    "number": 4
+  },
+  {
+    "id": "p348",
+    "name": "ZAID GABRIEL TORRES CARLOS",
+    "team": "Prebenjamín S7 A",
+    "pos": "DEF",
+    "originalPosition": "DEFENSA",
+    "number": 5
+  },
+  {
+    "id": "p349",
+    "name": "AINHOA ROJO VICO",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p350",
+    "name": "ANA MARIA MARTIN ROMERO",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p351",
+    "name": "CRISTINA MADRID GOMICIA",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p352",
+    "name": "ELENA MACIAS FRUTOS",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p353",
+    "name": "ESTHER VALERO MARTINEZ",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p354",
+    "name": "LAURA ROMERO LEON",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p355",
+    "name": "NOELIA ARA GALLARDO",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p356",
+    "name": "NOELIA VAZQUEZ VICO",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p357",
+    "name": "PASTORA LOPEZ DOMINGUEZ",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p358",
+    "name": "PATRICIA VELASCO CAMPAN",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p359",
+    "name": "RAQUEL LOPEZ GARCIA",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p360",
+    "name": "SANDRA VICO VEGA",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p361",
+    "name": "SUSANA GARCIA CONESA",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p362",
+    "name": "YAIZA SANTOS AVILA",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  },
+  {
+    "id": "p363",
+    "name": "YASMIN HERNANDEZ MARTINEZ",
+    "team": "Veteranas",
+    "pos": "MED",
+    "originalPosition": "",
+    "number": null
+  }
+]

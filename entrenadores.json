@@ -1,0 +1,254 @@
+[
+  {
+    "id": "c001",
+    "name": "GONZÁLEZ BELLAHNA, YASER",
+    "team": "Alevín S11 A",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c002",
+    "name": "MIR PEREZ, IKER",
+    "team": "Alevín S11 B",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c003",
+    "name": "RACHIK, ADAM",
+    "team": "Alevín S11 B",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c004",
+    "name": "TRILLAS DUEZ, BRUNO",
+    "team": "Alevín S12 A",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c005",
+    "name": "MARTINEZ, IZAN",
+    "team": "Alevín S12 B",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c006",
+    "name": "MUÑOZ RAGA, JOEL",
+    "team": "Alevín S12 B",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c007",
+    "name": "MOSCOSO MARTINEZ, RUBEN",
+    "team": "Alevín S12 C",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c008",
+    "name": "VERDEJO GOMEZ, NICOLAS",
+    "team": "Alevín S12 C",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c009",
+    "name": "MOSCOSO MARTINEZ, CRISTIAN",
+    "team": "Amateur Fem A",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c010",
+    "name": "JUAN CARLOS PLAZA",
+    "team": "Amateur Fem A",
+    "role": "2DO ENTRENADOR"
+  },
+  {
+    "id": "c011",
+    "name": "PEREZ DE TUDELA BALLESTER, VICTOR",
+    "team": "Amateur A",
+    "role": "2do ENTRENADOR"
+  },
+  {
+    "id": "c012",
+    "name": "FERRETE CARBONELL, SERGI",
+    "team": "Amateur A",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c013",
+    "name": "GARCIA GALVEZ, FRANCISCO JAVIER",
+    "team": "Amateur A",
+    "role": "3er ENTRENADOR"
+  },
+  {
+    "id": "c014",
+    "name": "RAMIREZ CORRALES, ANTONIO",
+    "team": "Amateur B",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c015",
+    "name": "FERNÁNDEZ BERMÚDEZ, DAVID",
+    "team": "Amateur Fem B",
+    "role": "Entrenador"
+  },
+  {
+    "id": "c016",
+    "name": "CAPDEVILA GIL, ARNAU",
+    "team": "Amateur Fem B",
+    "role": "2do entrenador"
+  },
+  {
+    "id": "c017",
+    "name": "PLAZA GARCIA, JUAN CARLOS",
+    "team": "Benjamín S9 A",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c018",
+    "name": "MORANTE ROMERO, RUBEN",
+    "team": "Benjamín S10 A",
+    "role": "2do entrenador"
+  },
+  {
+    "id": "c019",
+    "name": "YEPES BALDO, CARLOS",
+    "team": "Benjamín S10 A",
+    "role": "Entrenador"
+  },
+  {
+    "id": "c020",
+    "name": "MARTINEZ EL ABBASSI, SARA",
+    "team": "Cadete S15",
+    "role": "2DA ENTRENADORA"
+  },
+  {
+    "id": "c021",
+    "name": "GARCIA JURA, CRISTIAN",
+    "team": "Cadete S15",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c022",
+    "name": "CATALA DIAZ, CARLA",
+    "team": "Infantil S13",
+    "role": "ENTRENADORA"
+  },
+  {
+    "id": "c023",
+    "name": "MARTINEZ, IZAN",
+    "team": "Infantil S13",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c024",
+    "name": "MARTÍNEZ GÓMEZ, ERIC",
+    "team": "Infantil S14",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c025",
+    "name": "GONZALEZ BELLAHNA, YASER",
+    "team": "Infantil S14",
+    "role": "2DO ENTRENADOR"
+  },
+  {
+    "id": "c026",
+    "name": "MATEOS ALCAIDE, GISELA",
+    "team": "Infantil Fem A",
+    "role": "ENTRENADORA"
+  },
+  {
+    "id": "c027",
+    "name": "MARTINEZ PADILLA, JUAN PEDRO",
+    "team": "Infantil Fem A",
+    "role": "2DO ENTRENDOR"
+  },
+  {
+    "id": "c028",
+    "name": "MARTINEZ MONTILLA, MANUEL",
+    "team": "Juvenil A",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c029",
+    "name": "BUCKENS TAFALLA, BRUNO",
+    "team": "Juvenil B",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c030",
+    "name": "SEÑOR MÉNDEZ, JORGE",
+    "team": "Juvenil C",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c031",
+    "name": "BARRERAS DE RIOS, TIAGO",
+    "team": "Juvenil Fem A",
+    "role": "3ER ENTRENADOR"
+  },
+  {
+    "id": "c032",
+    "name": "NAVARRO GARCIA, ANGELA",
+    "team": "Juvenil Fem A",
+    "role": "2DA ENTRENADORA"
+  },
+  {
+    "id": "c033",
+    "name": "FERNÁNDEZ SOLA, ADRIÀ",
+    "team": "Juvenil Fem A",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c034",
+    "name": "IVAN RUEDA",
+    "team": "Genuino Blau",
+    "role": "AUXILIAR"
+  },
+  {
+    "id": "c035",
+    "name": "OSCAR AYALA",
+    "team": "Genuino Blau",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c036",
+    "name": "GUILLERMO",
+    "team": "Genuino Blau",
+    "role": "AUXILIAR"
+  },
+  {
+    "id": "c037",
+    "name": "AROA VICO",
+    "team": "Genuino Blau",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c038",
+    "name": "IVAN RUEDA",
+    "team": "Veteranas",
+    "role": "ENTRENADOR"
+  },
+  {
+    "id": "c039",
+    "name": "GUILLERMO ALCAIDE LORENTE",
+    "team": "Veteranas",
+    "role": "2DO ENTRENADOR"
+  },
+  {
+    "id": "c040",
+    "name": "MARTA SANCHEZ",
+    "team": "Prebenjamín S7 A",
+    "role": "ENTRENADORA"
+  },
+  {
+    "id": "c041",
+    "name": "PABLO MONTERO",
+    "team": "Prebenjamín S7 A",
+    "role": "2DO ENTRENADOR"
+  },
+  {
+    "id": "c042",
+    "name": "IVAN BERLANGA",
+    "team": "Prebenjamín S7 A",
+    "role": "3ER ENTRENADOR"
+  }
+]
