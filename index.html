@@ -175,7 +175,61 @@ footer button.active{color:#19539d;font-weight:800}
  .pitch .pitch-line-3{margin-top:12px}
 }
 @media(prefers-reduced-motion:reduce){.pitch .player{transition:none}}
-</style></head><body><header class="club-header"><div class="club-stripe"></div><div class="club-header-inner"><div class="club-mark" aria-hidden="true">⚽</div><div class="club-heading"><h1>FANTASY PENYA</h1><div class="sub">PENYA BARCELONISTA · SANT VICENÇ DELS HORTS</div></div><button class="header-profile" onclick="show('profile')" aria-label="Abrir mi perfil Fantasy" title="Mi perfil"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c0-4.5 3-7 7.5-7s7.5 2.5 7.5 7"/></svg></button></div><div class="club-header-bottom"><span>LA LLIGA FANTASY DEL CLUB</span><span class="demo-pill">VERSIÓN DE PRUEBA 3.6</span></div></header><main><div class="stats"><div class="stat"><b id="total">0</b><small>Puntos jornada</small></div><div class="stat"><b id="picked">0/12</b><small>Seleccionados</small></div><div class="stat"><b id="currentWeekLabel">1</b><small>Jornada de prueba</small></div></div>
+
+/* 3.7 · maqueta de estadio trapezoidal, tarjetas verticales */
+.pitch{
+ position:relative;isolation:isolate;display:flex;flex-direction:column;
+ max-width:590px;margin:25px auto 30px;padding:34px 9px 27px;
+ border:0;border-radius:0;overflow:visible;
+ background:none;box-shadow:none;transform:none;
+}
+.pitch::before{
+ content:"";position:absolute;z-index:0;pointer-events:none;
+ inset:0 -4px -17px;
+ clip-path:polygon(13% 0,87% 0,100% 95%,98% 100%,2% 100%,0 95%);
+ border:0;border-radius:0;
+ background:
+ radial-gradient(ellipse at 48% 12%,#d2ffa92c,transparent 47%),
+ linear-gradient(170deg,#ffffff13 0%,transparent 42%,#061f1452 100%),
+ repeating-linear-gradient(0deg,#277e39 0 31px,#348e45 31px 62px);
+ box-shadow:none;
+ filter:none;
+}
+.pitch::after{
+ content:"";position:absolute;z-index:1;pointer-events:none;
+ inset:14px 10px 6px;
+ clip-path:polygon(12% 0,88% 0,100% 100%,0 100%);
+ border:0;border-radius:0;transform:none;
+ background:
+ linear-gradient(#e9ffe5bc,#e9ffe5bc) center top / 76% 2px no-repeat,
+ linear-gradient(#e9ffe5bc,#e9ffe5bc) center bottom / 100% 2px no-repeat,
+ linear-gradient(90deg,#e9ffe5bc,#e9ffe5bc) 12% 0 / 2px 100% no-repeat,
+ linear-gradient(90deg,#e9ffe5bc,#e9ffe5bc) 88% 0 / 2px 100% no-repeat,
+ linear-gradient(#e9ffe5a6,#e9ffe5a6) center 50% / 100% 2px no-repeat,
+ linear-gradient(#e9ffe5b2,#e9ffe5b2) center 13% / 43% 2px no-repeat,
+ linear-gradient(#e9ffe5b2,#e9ffe5b2) center 87% / 64% 2px no-repeat,
+ linear-gradient(90deg,#e9ffe5b2,#e9ffe5b2) 29% 0 / 2px 13% no-repeat,
+ linear-gradient(90deg,#e9ffe5b2,#e9ffe5b2) 71% 0 / 2px 13% no-repeat,
+ linear-gradient(90deg,#e9ffe5b2,#e9ffe5b2) 18% 100% / 2px 13% no-repeat,
+ linear-gradient(90deg,#e9ffe5b2,#e9ffe5b2) 82% 100% / 2px 13% no-repeat;
+ opacity:.85;
+}
+.pitch-heading{position:relative;z-index:3;color:#fff;text-shadow:0 2px 5px #092513;margin:0 0 9px}
+.pitch .line{position:relative;z-index:3;transform:none;gap:4px;margin:11px 0 17px}
+.pitch .pitch-line-3{margin-top:17px}
+.pitch .pitch-line-0{margin-top:22px;margin-bottom:8px}
+.pitch .player-card{filter:drop-shadow(0 6px 5px #041b0d99)}
+.pitch .player{transform:none}
+.pitch .player:active{transform:translateY(2px)}
+@media(max-width:420px){
+ .pitch{padding:29px 5px 20px;margin:20px auto 26px}
+ .pitch::before{inset:0 -2px -14px;clip-path:polygon(11% 0,89% 0,100% 95%,98% 100%,2% 100%,0 95%)}
+ .pitch::after{inset:12px 6px 5px}
+ .pitch .line{transform:none;margin:8px 0 13px;gap:3px}
+ .pitch .pitch-line-0{margin-top:17px;margin-bottom:5px}
+ .pitch .pitch-line-3{margin-top:12px}
+}
+</style></head><body><header class="club-header"><div class="club-stripe"></div><div class="club-header-inner"><div class="club-mark" aria-hidden="true">⚽</div><div class="club-heading"><h1>FANTASY PENYA</h1><div class="sub">PENYA BARCELONISTA · SANT VICENÇ DELS HORTS</div></div><button class="header-profile" onclick="show('profile')" aria-label="Abrir mi perfil Fantasy" title="Mi perfil"><svg viewBox="0 0 24 24" width="23" height="23" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 21c0-4.5 3-7 7.5-7s7.5 2.5 7.5 7"/></svg></button></div><div class="club-header-bottom"><span>LA LLIGA FANTASY DEL CLUB</span><span class="demo-pill">VERSIÓN DE PRUEBA 3.7</span></div></header><main><div class="stats"><div class="stat"><b id="total">0</b><small>Puntos jornada</small></div><div class="stat"><b id="picked">0/12</b><small>Seleccionados</small></div><div class="stat"><b id="currentWeekLabel">1</b><small>Jornada de prueba</small></div></div>
 <div id="teamView" class="view active"><div class="row"><h2>Mi once titular</h2><select id="formation" style="width:110px" onchange="changeFormation()"><option>4-3-3</option><option>4-4-2</option><option>3-5-2</option><option>5-3-2</option></select></div><div class="controls"><span id="activeLineupWeek">Mi once · jornada 1</span><button class="secondary" id="editLineup" onclick="enableLineupEdit()">Editar once</button></div><p id="lineupStatus" class="notice"></p><div class="pitch" id="pitch"></div><div class="coach"><div><b>🧑‍🏫 Entrenador</b><button id="coachName" class="secondary" style="padding:5px 0;background:none;border:0;text-align:left;text-decoration:underline" onclick="if(coachId)openProfile(coachId)">Sin seleccionar</button></div><button class="primary" onclick="openCoach()">Elegir</button></div><div class="controls"><button class="primary" onclick="save()">💾 Guardar once</button><button class="secondary" onclick="resetTeam()">Vaciar equipo</button></div><p class="notice">Toca una posición para elegir un futbolista. Cada alineación tiene 11 jugadores y un técnico. Los datos se guardan únicamente en este navegador.</p><details class="rules-panel"><summary>📘 Reglamento Fantasy Penya</summary><p>Modo pruebas: los resultados y puntos se guardan solo en este dispositivo. Todavía no existe competición oficial ni calendario activado.</p><table class="rules-table"><tr><th>Concepto</th><th>Futbolistas</th><th>Técnicos</th></tr><tr><td>Victoria</td><td>+3</td><td>+5</td></tr><tr><td>Empate</td><td>+1</td><td>+2</td></tr><tr><td>Derrota</td><td>0</td><td>0</td></tr><tr><td>Gol (máx. 3)</td><td>+3 cada uno</td><td>—</td></tr><tr><td>Portería imbatida (POR/DEF)</td><td>+3</td><td>—</td></tr><tr><td>Tarjeta roja</td><td>−5</td><td>—</td></tr></table><p>Todos los futbolistas reciben los puntos del resultado, jueguen o no. Todos los técnicos del equipo reciben el mismo bonus. La portería imbatida se aplica a todos los porteros y defensas de la plantilla.</p><p><b>Calendario previsto:</b> apertura lunes 10:00, cierre viernes 23:00 (hora de Barcelona). Fecha de inicio pendiente. Los bloqueos reales requerirán validación en servidor.</p></details></div>
 <div id="marketView" class="view"><div class="row"><button class="secondary" onclick="backToTeam()">← Volver a mi once</button></div><h2 id="marketTitle">Consultar futbolistas</h2><p class="notice" id="marketHint"></p><input id="search" class="search" placeholder="Buscar nombre o equipo" oninput="renderMarket()"><div class="controls"><select id="teamFilter" onchange="renderMarket()"><option value="">Todos los equipos</option><option>Cadete S15 (demo)</option><option>Juvenil (demo)</option><option>Amateur (demo)</option><option>Femenino (demo)</option></select></div><p class="sub" id="resultCount" aria-live="polite"></p><div class="panel results" id="results"></div></div>
 <div id="summaryView" class="view"><h2>Resumen de jornadas</h2><p class="notice">Modo pruebas: las jornadas siguen siendo editables. Calendario oficial pendiente: lunes 10:00 apertura, viernes 23:00 cierre (Barcelona). Los bloqueos definitivos requerirán validación en servidor.</p><div class="stats"><div class="stat"><b id="summaryTotal">0</b><small>Total acumulado</small></div><div class="stat"><b id="summaryBest">—</b><small>Mejor jornada</small></div><div class="stat"><b id="summaryWorst">—</b><small>Peor jornada</small></div></div><div class="panel"><h3>Evolución de puntos</h3><div id="summaryChart"></div><h3>Historial de alineaciones</h3><div id="summaryList"></div><div id="historicDetails" class="panel"></div></div></div><div id="profileView" class="view"><h2>Mi perfil Fantasy</h2><div class="panel"><p class="notice">Perfil de prueba de este dispositivo. Todavía no hay cuentas, usuarios compartidos ni clasificación oficial.</p><label for="fantasyAlias">Nombre de mi equipo Fantasy</label><div class="controls"><input id="fantasyAlias" maxlength="36" placeholder="Mi equipo Fantasy"><button class="primary" onclick="saveFantasyAlias()">Guardar nombre</button></div><div class="stats"><div class="stat"><b id="profileTotal">0</b><small>Puntos acumulados</small></div><div class="stat"><b id="profileWeeks">0</b><small>Jornadas guardadas</small></div><div class="stat"><b id="profileAverage">0</b><small>Media por jornada</small></div></div><div id="profileOverview"></div></div><div class="panel"><h3>Mi clasificación Fantasy</h3><p class="notice">Solo se muestra tu perfil local. Cuando conectemos cuentas reales, aparecerán los demás participantes y su posición en la clasificación.</p><div id="participantRanking"></div></div><div class="panel"><h3>Seguridad de tus datos</h3><p class="notice">Los datos de prueba se guardan en este navegador. Descarga una copia JSON y guárdala fuera del móvil. Importarla sustituirá los datos locales.</p><div class="controls"><button class="primary" onclick="exportBackup()">⬇️ Descargar copia</button><label class="secondary" for="backupInput" style="cursor:pointer;padding:10px;border-radius:8px">⬆️ Restaurar copia</label><input id="backupInput" type="file" accept=".json,application/json" onchange="importBackup(this)" style="display:none"></div></div></div>
