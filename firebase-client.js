@@ -1,6 +1,6 @@
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js';
 import {getAuth,GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js';
-import {getFirestore,doc,getDoc,setDoc,collection,getDocs,writeBatch} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js';
+import {getFirestore,doc,getDoc,setDoc,collection,getDocs,writeBatch,runTransaction} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js';
 const app=initializeApp({apiKey:"AIzaSyD-RZxxWJqPt5W9IRRS6CjcpYrwgVRXdd0",authDomain:"fantasy-penya.firebaseapp.com",projectId:"fantasy-penya",storageBucket:"fantasy-penya.firebasestorage.app",messagingSenderId:"907901895323",appId:"1:907901895323:web:f3a022b098a8f4b5213c3e"});
 const auth=getAuth(app),db=getFirestore(app);
 auth.languageCode='es';
@@ -34,4 +34,11 @@ export async function saveOfficialScores(round,scores){
  if(!await isAdmin())throw Error('Sin permisos');
  if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!scores||Object.values(scores).some(v=>!Number.isInteger(v)||v< -5||v>15))throw Error('Puntuaciones inválidas');
  await setDoc(doc(db,'official',String(round)),{scores});
+}
+
+export async function saveTeamResult(round,team,record,scores){
+ if(!await isAdmin())throw Error('Sin permisos');
+ if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!team||Object.values(scores).some(v=>!Number.isInteger(v)||v< -5||v>15))throw Error('Datos inválidos');
+ const ref=doc(db,'official',String(round));
+ return runTransaction(db,async tx=>{const snap=await tx.get(ref),old=snap.exists()?snap.data():{};const next={scores:{...old.scores,...scores},results:{...old.results,[team]:record}};tx.set(ref,next);return next;});
 }
