@@ -3,6 +3,13 @@ service cloud.firestore {
  match /databases/{database}/documents {
   function signed(){return request.auth != null && request.auth.token.email_verified == true;}
   function admin(){return signed() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));}
+  function validPolicy(p){return p is map && p.keys().hasOnly(['version','win','draw','loss','goal','maxGoals','red','cleanSheet','coachWin','coachDraw','coachLoss','captainMultiplier']) && p.version==1 && p.win is int && p.win >= -20 && p.win <= 20 && p.draw is int && p.draw >= -20 && p.draw <= 20 && p.loss is int && p.loss >= -20 && p.loss <= 20 && p.goal is int && p.goal >= -20 && p.goal <= 20 && p.maxGoals is int && p.maxGoals >= 0 && p.maxGoals <= 10 && p.red is int && p.red >= -20 && p.red <= 20 && p.cleanSheet is int && p.cleanSheet >= -20 && p.cleanSheet <= 20 && p.coachWin is int && p.coachWin >= -20 && p.coachWin <= 20 && p.coachDraw is int && p.coachDraw >= -20 && p.coachDraw <= 20 && p.coachLoss is int && p.coachLoss >= -20 && p.coachLoss <= 20 && p.captainMultiplier is int && p.captainMultiplier >= 1 && p.captainMultiplier <= 5;}
+  match /config/competition {
+   allow read: if signed();
+   allow create: if admin() && request.resource.data.keys().hasOnly(['policy']) && validPolicy(request.resource.data.policy);
+   allow update,delete: if false;
+  }
+  function competitionPolicyMatches(p){return !exists(/databases/$(database)/documents/config/competition) || p==get(/databases/$(database)/documents/config/competition).data.policy;}
   function validRound(round){return round.matches('^([1-9]|[12][0-9]|3[0-8])$');}
   function validRoster(d){let roster=get(/databases/$(database)/documents/config/roster).data;let p=roster.players;return d.coachId in roster.coaches && ((d.formation=='4-3-3' && p.get(d.slots[0], '')=='POR' && p.get(d.slots[1], '')=='DEF' && p.get(d.slots[2], '')=='DEF' && p.get(d.slots[3], '')=='DEF' && p.get(d.slots[4], '')=='DEF' && p.get(d.slots[5], '')=='MED' && p.get(d.slots[6], '')=='MED' && p.get(d.slots[7], '')=='MED' && p.get(d.slots[8], '')=='DEL' && p.get(d.slots[9], '')=='DEL' && p.get(d.slots[10], '')=='DEL') || (d.formation=='4-4-2' && p.get(d.slots[0], '')=='POR' && p.get(d.slots[1], '')=='DEF' && p.get(d.slots[2], '')=='DEF' && p.get(d.slots[3], '')=='DEF' && p.get(d.slots[4], '')=='DEF' && p.get(d.slots[5], '')=='MED' && p.get(d.slots[6], '')=='MED' && p.get(d.slots[7], '')=='MED' && p.get(d.slots[8], '')=='MED' && p.get(d.slots[9], '')=='DEL' && p.get(d.slots[10], '')=='DEL') || (d.formation=='3-5-2' && p.get(d.slots[0], '')=='POR' && p.get(d.slots[1], '')=='DEF' && p.get(d.slots[2], '')=='DEF' && p.get(d.slots[3], '')=='DEF' && p.get(d.slots[4], '')=='MED' && p.get(d.slots[5], '')=='MED' && p.get(d.slots[6], '')=='MED' && p.get(d.slots[7], '')=='MED' && p.get(d.slots[8], '')=='MED' && p.get(d.slots[9], '')=='DEL' && p.get(d.slots[10], '')=='DEL') || (d.formation=='5-3-2' && p.get(d.slots[0], '')=='POR' && p.get(d.slots[1], '')=='DEF' && p.get(d.slots[2], '')=='DEF' && p.get(d.slots[3], '')=='DEF' && p.get(d.slots[4], '')=='DEF' && p.get(d.slots[5], '')=='DEF' && p.get(d.slots[6], '')=='MED' && p.get(d.slots[7], '')=='MED' && p.get(d.slots[8], '')=='MED' && p.get(d.slots[9], '')=='DEL' && p.get(d.slots[10], '')=='DEL'));}
   match /config/roster {allow read: if signed();allow create,update: if admin();allow delete: if false;}
@@ -20,7 +27,7 @@ service cloud.firestore {
   }
   match /rounds/{round}{
    allow read: if signed();
-   allow create: if admin() && validRound(round) && request.resource.data.keys().hasOnly(['opensAt','closesAt','policy']) && request.resource.data.policy is map && request.resource.data.opensAt is timestamp && request.resource.data.closesAt is timestamp && request.resource.data.opensAt<request.resource.data.closesAt;
+   allow create: if admin() && validRound(round) && request.resource.data.keys().hasOnly(['opensAt','closesAt','policy']) && validPolicy(request.resource.data.policy) && competitionPolicyMatches(request.resource.data.policy) && request.resource.data.opensAt is timestamp && request.resource.data.closesAt is timestamp && request.resource.data.opensAt<request.resource.data.closesAt;
    allow update,delete: if false;
   }
   match /official/{round}{
