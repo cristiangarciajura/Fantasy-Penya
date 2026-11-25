@@ -1,3 +1,5 @@
+import {prepareBatch} from './batch-import.js';
+import {mergeBatch} from './batch-merge.js';
 import {DEFAULT_POLICY,scoreLineup} from './scoring-policy.js';
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js';
 import {getAuth,GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js';
@@ -68,3 +70,21 @@ export async function readParticipation(round){if(!await isAdmin())throw Error('
 
 export async function registerParticipant(){const uid=verified();const ref=doc(db,'participants',uid);await runTransaction(db,async tx=>{if(!(await tx.get(ref)).exists())tx.set(ref,{registered:true});});}
 export async function initializeRoster(){if(!await isAdmin())throw Error('Sin permisos');const response=await fetch('./firebase-roster.json');if(!response.ok)throw Error('Catálogo no disponible');const roster=await response.json();await setDoc(doc(db,'config','roster'),roster);}
+
+
+export async function publishMatchBatch(round,matches){
+ if(!await isAdmin())throw Error('Sin permisos');
+ const key=String(round);
+ if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(key))throw Error('Jornada inválida');
+ const currentPhase=phase;
+ const [players,coaches]=await Promise.all(['jugadores.json','entrenadores.json'].map(async path=>{const r=await fetch('./'+path);if(!r.ok)throw Error('Catálogo no disponible');return r.json()}));
+ const roundRef=doc(db,currentPhase+'_rounds',key),ref=doc(db,currentPhase+'_official',key);
+ return runTransaction(db,async tx=>{
+  const calendar=await tx.get(roundRef),old=await tx.get(ref);
+  if(!calendar.exists()||calendar.data().closesAt.toMillis()>Date.now())throw Error('Jornada no cerrada');
+  const batch=prepareBatch(matches,players,coaches,calendar.data().policy||DEFAULT_POLICY);
+  if(!batch.canPublish)throw Error('Lote con incidencias: '+batch.issues.map(x=>x.error).join('; '));
+  const next=mergeBatch(old.exists()?old.data():{},batch);
+  tx.set(ref,next);return next;
+ });
+}
