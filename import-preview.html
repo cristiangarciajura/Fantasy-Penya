@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fantasy Penya · Prueba de importación</title>
+<style>body{font:16px system-ui;background:#101827;color:#eee;max-width:800px;margin:24px auto;padding:16px}textarea{width:100%;box-sizing:border-box;min-height:200px;background:#202c40;color:white;padding:12px}button,input{font:inherit;margin:8px 0}button{padding:12px;border:0;border-radius:8px}article{background:#202c40;padding:12px;margin:10px 0;border-radius:8px}pre{white-space:pre-wrap;overflow-wrap:anywhere}</style>
+<h1>Importación masiva</h1><p>Modo de prueba: no guarda datos ni publica puntos. Usa el reglamento provisional.</p>
+<label for="data">Datos de partidos en JSON</label><textarea id="data" placeholder="Pega aquí el lote de partidos"></textarea>
+<label for="file">O selecciona un archivo JSON</label><input id="file" type="file" accept=".json,application/json">
+<button id="run">Validar y calcular</button><button id="sample">Cargar ejemplo ficticio</button>
+<section id="out" aria-live="polite"></section>
+<script type="module">
+import {prepareBatch} from './batch-import.js';
+const el=id=>document.getElementById(id);
+const line=(parent,tag,value)=>{const n=document.createElement(tag);n.textContent=value;parent.append(n);return n};
+el('file').onchange=async()=>{try{const f=el('file').files[0];if(f){if(f.size>1000000)throw Error('Archivo demasiado grande');el('data').value=await f.text()}}catch(e){el('out').textContent=e.message}};
+async function catalog(path){const r=await fetch(path);if(!r.ok)throw Error('No se pudo cargar el catálogo');return r.json()}
+el('sample').onclick=async()=>{try{const p=(await catalog('./jugadores.json'))[0];el('data').value=JSON.stringify([{id:'ejemplo-ficticio',team:p.team,status:'finished',forGoals:1,againstGoals:0,events:[{type:'goal',name:p.name}]}],null,2)}catch(e){el('out').textContent=e.message}};
+el('run').onclick=async()=>{const out=el('out');out.textContent='Validando…';el('run').disabled=true;try{const matches=JSON.parse(el('data').value);const [players,coaches]=await Promise.all([catalog('./jugadores.json'),catalog('./entrenadores.json')]);const batch=prepareBatch(matches,players,coaches);out.replaceChildren();line(out,'h2',batch.ready.length+' de '+batch.total+' partidos válidos');line(out,'p',batch.canPublish?'Lote válido para revisión':'Lote con incidencias');for(const item of batch.issues)line(out,'article',(item.team||'Sin equipo')+': '+item.error);for(const item of batch.ready){const card=line(out,'article','');line(card,'h3',item.team);line(card,'p',item.record.result+' · '+Object.keys(item.scores).length+' puntuaciones calculadas');for(const w of item.warnings)line(card,'p',w);const people=[...players,...coaches];for(const [id,score] of Object.entries(item.scores))line(card,'div',(people.find(p=>p.id===id)?.name||id)+': '+score+' pts')}}catch(e){out.textContent=e.message}finally{el('run').disabled=false}};
+</script></html>
