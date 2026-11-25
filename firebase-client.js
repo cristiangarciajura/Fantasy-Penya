@@ -88,3 +88,14 @@ export async function publishMatchBatch(round,matches){
   tx.set(ref,next);return next;
  });
 }
+
+ // Publication and ranking are separate operations; report partial success explicitly.
+export async function publishBatchAndRefreshRanking(round,matches){
+ const published=await publishMatchBatch(round,matches);
+ try{
+  const ranking=await rebuildRanking();
+  return {published,ranking,rankingUpdated:true};
+ }catch(error){
+  return {published,rankingUpdated:false,rankingError:error.message};
+ }
+}
