@@ -23,3 +23,15 @@ export async function readRounds(){verified();const s=await getDocs(collection(d
 export async function readLineups(){const s=await getDocs(collection(db,'users',verified(),'lineups'));return Object.fromEntries(s.docs.map(d=>[d.id,d.data()]));}
 export async function submitLineup(round,team){const uid=verified();const {formation,slots,coachId,captainId,alias}=team;if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||slots.length!==11||slots.some(x=>typeof x!=='string'||!x)||new Set(slots).size!==11||!coachId||!slots.includes(captainId))throw new Error('Alineación incompleta');const batch=writeBatch(db);batch.set(doc(db,'users',uid),{alias,formation,slots,coachId,captainId});batch.set(doc(db,'users',uid,'lineups',String(round)),{formation,slots,coachId,captainId});await batch.commit();}
 export async function readOfficial(){verified();const s=await getDocs(collection(db,'official'));return Object.fromEntries(s.docs.map(d=>[d.id,d.data()]));}
+
+export async function saveRound(round,opensAt,closesAt){
+ if(!await isAdmin())throw Error('Sin permisos');
+ if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!(opensAt instanceof Date)||!(closesAt instanceof Date)||!Number.isFinite(+opensAt)||!Number.isFinite(+closesAt)||+opensAt>=+closesAt)throw Error('Fechas inválidas');
+ const ref=doc(db,'rounds',String(round));if((await getDoc(ref)).exists())throw Error('Jornada ya creada');
+ await setDoc(ref,{opensAt,closesAt});
+}
+export async function saveOfficialScores(round,scores){
+ if(!await isAdmin())throw Error('Sin permisos');
+ if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!scores||Object.values(scores).some(v=>!Number.isInteger(v)||v< -5||v>15))throw Error('Puntuaciones inválidas');
+ await setDoc(doc(db,'official',String(round)),{scores});
+}
