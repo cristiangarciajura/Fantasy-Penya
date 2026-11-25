@@ -29,7 +29,7 @@ export async function saveRound(round,opensAt,closesAt,policy=DEFAULT_POLICY){
  if(!await isAdmin())throw Error('Sin permisos');
  if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!(opensAt instanceof Date)||!(closesAt instanceof Date)||!Number.isFinite(+opensAt)||!Number.isFinite(+closesAt)||+opensAt>=+closesAt)throw Error('Fechas inválidas');
  const ref=doc(db,'rounds',String(round));if((await getDoc(ref)).exists())throw Error('Jornada ya creada');
- await setDoc(ref,{opensAt,closesAt,policy});
+ const locked=await readCompetitionPolicy();await setDoc(ref,{opensAt,closesAt,policy:locked||policy});
 }
 export async function saveOfficialScores(round,scores){
  if(!await isAdmin())throw Error('Sin permisos');
@@ -57,3 +57,6 @@ export async function rebuildRanking(){
  if(rows.length>450)throw Error('Ranking demasiado grande para una publicación');
  const batch=writeBatch(db);for(const {id,...row} of rows)batch.set(doc(db,'ranking',id),row);await batch.commit();return rows;
 }
+
+export async function readCompetitionPolicy(){verified();const s=await getDoc(doc(db,'config','competition'));return s.exists()?s.data().policy:null;}
+export async function lockCompetitionPolicy(policy){if(!await isAdmin())throw Error('Sin permisos');await runTransaction(db,async tx=>{const ref=doc(db,'config','competition');if((await tx.get(ref)).exists())throw Error('Reglamento ya fijado');tx.set(ref,{policy});});}
