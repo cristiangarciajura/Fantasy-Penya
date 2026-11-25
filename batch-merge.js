@@ -15,3 +15,18 @@ export function mergeBatch(previous,batch){
  }
  return {scores,results};
 }
+
+function canonical(v){
+ if(Array.isArray(v))return v.map(canonical);
+ if(v&&typeof v==='object')return Object.fromEntries(Object.keys(v).sort().map(k=>[k,canonical(v[k])]));
+ return v;
+}
+export function reviewBatch(previous,batch){
+ const next=mergeBatch(previous,batch);
+ const items=batch.ready.map(item=>{
+  const old=previous?.results?.[item.team],fresh=next.results[item.team];
+  const same=old&&JSON.stringify(canonical(old))===JSON.stringify(canonical(fresh))&&Object.entries(item.scores).every(([id,n])=>previous?.scores?.[id]===n);
+  return {team:item.team,matchId:item.matchId,status:!old?'new':same?'unchanged':'corrected'};
+ });
+ return {items,newCount:items.filter(x=>x.status==='new').length,unchangedCount:items.filter(x=>x.status==='unchanged').length,correctedCount:items.filter(x=>x.status==='corrected').length,next};
+}
