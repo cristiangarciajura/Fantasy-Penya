@@ -37,7 +37,7 @@ service cloud.firestore {
    allow read: if signed();
    allow create, update: if admin() && exists(/databases/$(database)/documents/rounds/$(round))
     && request.time >= get(/databases/$(database)/documents/rounds/$(round)).data.closesAt
-    && request.resource.data.keys().hasOnly(['scores']) && request.resource.data.scores is map;
+    && request.resource.data.keys().hasOnly(['scores','results']) && request.resource.data.scores is map && request.resource.data.results is map;
    allow delete: if false;
   }
   match /ranking/{uid} { allow read: if signed(); allow write: if false; }
