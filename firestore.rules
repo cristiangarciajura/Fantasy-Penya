@@ -30,7 +30,24 @@ service cloud.firestore {
     && request.resource.data.captainId is string && request.resource.data.captainId in request.resource.data.slots;
    allow delete: if false;
   }
-  match /rounds/{round} { allow read: if signed(); allow write: if admin(); }
+  match /rounds/{round} {
+   allow read: if signed();
+   allow create: if admin() && round.matches('^([1-9]|[12][0-9]|3[0-8])
+  match /official/{round} {
+   allow read: if signed();
+   allow create, update: if admin() && exists(/databases/$(database)/documents/rounds/$(round))
+    && request.time >= get(/databases/$(database)/documents/rounds/$(round)).data.closesAt
+    && request.resource.data.keys().hasOnly(['scores']) && request.resource.data.scores is map;
+   allow delete: if false;
+  }
+  match /ranking/{uid} { allow read: if signed(); allow write: if false; }
+ }
+})
+    && request.resource.data.keys().hasOnly(['opensAt','closesAt'])
+    && request.resource.data.opensAt is timestamp && request.resource.data.closesAt is timestamp
+    && request.resource.data.opensAt < request.resource.data.closesAt;
+   allow update, delete: if false;
+  }
   match /official/{doc} { allow read: if signed(); allow write: if admin(); }
   match /ranking/{uid} { allow read: if signed(); allow write: if false; }
  }
