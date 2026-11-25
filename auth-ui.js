@@ -1,4 +1,4 @@
-import {session,readTeam,writeTeam} from './firebase-client.js';
+import {session,readTeam,readRounds,readLineups,readOfficial,submitLineup} from './firebase-client.js';
 const $=id=>document.getElementById(id);
 const status=$('authStatus');
 const email=()=>$('authEmail').value.trim();
@@ -15,8 +15,8 @@ function render(u){const signed=!!u;for(const id of ['authForm','authRegister','
 $('authRefresh').onclick=()=>run(async()=>render(await session.refresh()));
 $('authExit').onclick=()=>run(()=>session.logout());
 let generation=0,activeUid=null;
-async function sync(u){const g=++generation;activeUid=null;window.cloudTeam.ready=false;$('authGate').style.display='grid';$('cloudLogout').hidden=true;render(u);if(!u?.emailVerified)return;status.textContent='Cargando equipo…';try{await window.rosterPromise;const data=await readTeam();if(g!==generation)return;window.cloudTeam.apply(data);activeUid=u.uid;window.cloudTeam.ready=true;$('authGate').style.display='none';$('cloudLogout').hidden=false;}catch(e){if(g===generation)status.textContent='No se puede cargar el equipo. Comprueba las reglas de Firebase y vuelve a iniciar sesión.';}}
+async function sync(u){const g=++generation;activeUid=null;window.cloudTeam.ready=false;$('authGate').style.display='grid';$('cloudLogout').hidden=true;render(u);if(!u?.emailVerified)return;status.textContent='Cargando equipo…';try{await window.rosterPromise;const [data,rounds,history,official]=await Promise.all([readTeam(),readRounds(),readLineups(),readOfficial()]);if(g!==generation)return;window.cloudTeam.apply(data,rounds,history,official);activeUid=u.uid;window.cloudTeam.ready=true;$('authGate').style.display='none';$('cloudLogout').hidden=false;}catch(e){if(g===generation)status.textContent='No se puede cargar el equipo. Comprueba las reglas de Firebase y vuelve a iniciar sesión.';}}
 $('authRefresh').onclick=()=>run(async()=>sync(await session.refresh()));
 $('cloudLogout').onclick=()=>run(async()=>{window.cloudTeam.ready=false;$('authGate').style.display='grid';await session.logout();});
-window.cloudSave=async()=>{if(!window.cloudTeam.ready||!activeUid||busy)return;busy=true;const g=generation;try{await writeTeam(window.cloudTeam.data());if(g===generation)window.toast('Equipo guardado en la nube');}catch(e){if(g===generation)window.toast('Error al guardar. Vuelve a intentarlo.');}finally{busy=false}};
+window.cloudSave=async()=>{if(!window.cloudTeam.ready||!activeUid||busy)return;busy=true;const g=generation;try{const w=window.cloudTeam.round(),d=window.cloudTeam.data();if(!window.cloudTeam.isOpen()||!d.captainId){window.toast('Selecciona capitán y una jornada abierta');return;}await submitLineup(w,d);if(g===generation){window.cloudTeam.saved(w,d);window.toast('Alineación guardada en la nube');}}catch(e){if(g===generation)window.toast('Error al guardar. Vuelve a intentarlo.');}finally{busy=false}};
 session.observe(sync);
