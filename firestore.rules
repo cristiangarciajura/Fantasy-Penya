@@ -20,7 +20,7 @@ service cloud.firestore {
   }
   match /rounds/{round}{
    allow read: if signed();
-   allow create: if admin() && validRound(round) && request.resource.data.keys().hasOnly(['opensAt','closesAt']) && request.resource.data.opensAt is timestamp && request.resource.data.closesAt is timestamp && request.resource.data.opensAt<request.resource.data.closesAt;
+   allow create: if admin() && validRound(round) && request.resource.data.keys().hasOnly(['opensAt','closesAt','policy']) && request.resource.data.policy is map && request.resource.data.opensAt is timestamp && request.resource.data.closesAt is timestamp && request.resource.data.opensAt<request.resource.data.closesAt;
    allow update,delete: if false;
   }
   match /official/{round}{
