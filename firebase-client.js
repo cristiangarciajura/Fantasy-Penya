@@ -63,3 +63,5 @@ export async function rebuildRanking(){
 
 export async function readCompetitionPolicy(){verified();const s=await getDoc(doc(db,'config','competition'));return s.exists()?s.data().policy:null;}
 export async function lockCompetitionPolicy(policy){if(!await isAdmin())throw Error('Sin permisos');await runTransaction(db,async tx=>{const ref=doc(db,'config','competition');if((await tx.get(ref)).exists())throw Error('Reglamento ya fijado');tx.set(ref,{policy});});}
+
+export async function readParticipation(round){if(!await isAdmin())throw Error('Sin permisos');if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round)))throw Error('Jornada inválida');const users=await getDocs(collection(db,'users'));return Promise.all(users.docs.map(async u=>({alias:u.data().alias,submitted:(await getDoc(doc(db,'users',u.id,scoped('lineups'),String(round)))).exists()})));}
