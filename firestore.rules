@@ -15,6 +15,22 @@ service cloud.firestore {
     && request.resource.data.coachId is string && request.resource.data.captainId is string;
    allow delete: if false;
   }
+  match /users/{uid}/lineups/{round} {
+   allow read: if signed() && request.auth.uid == uid;
+   allow create, update: if signed() && request.auth.uid == uid
+    && exists(/databases/$(database)/documents/rounds/$(round))
+    && get(/databases/$(database)/documents/rounds/$(round)).data.opensAt <= request.time
+    && request.time < get(/databases/$(database)/documents/rounds/$(round)).data.closesAt
+    && request.resource.data.keys().hasOnly(['formation','slots','coachId','captainId'])
+    && request.resource.data.keys().hasAll(['formation','slots','coachId','captainId'])
+    && request.resource.data.formation in ['4-3-3','4-4-2','3-5-2','5-3-2']
+    && request.resource.data.slots is list && request.resource.data.slots.size() == 11
+    && request.resource.data.slots.toSet().size() == 11
+    && request.resource.data.coachId is string && request.resource.data.coachId.size() > 0
+    && request.resource.data.captainId is string && request.resource.data.captainId in request.resource.data.slots;
+   allow delete: if false;
+  }
+  match /rounds/{round} { allow read: if signed(); allow write: if admin(); }
   match /official/{doc} { allow read: if signed(); allow write: if admin(); }
   match /ranking/{uid} { allow read: if signed(); allow write: if false; }
  }
