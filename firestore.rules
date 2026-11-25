@@ -1,54 +1,35 @@
 rules_version = '2';
 service cloud.firestore {
  match /databases/{database}/documents {
-  function signed() { return request.auth != null && request.auth.token.email_verified == true; }
-  function admin() { return signed() && exists(/databases/$(database)/documents/admins/$(request.auth.uid)); }
-  match /admins/{uid} { allow read: if signed() && request.auth.uid == uid; allow write: if false; }
-  match /users/{uid} {
-   allow read: if signed() && (request.auth.uid == uid || admin());
-   allow create, update: if signed() && request.auth.uid == uid
-    && request.resource.data.keys().hasOnly(['alias','formation','slots','coachId','captainId'])
-    && request.resource.data.keys().hasAll(['alias','formation','slots','coachId','captainId'])
-    && request.resource.data.alias is string && request.resource.data.alias.size() <= 36
-    && request.resource.data.formation in ['4-3-3','4-4-2','3-5-2','5-3-2']
-    && request.resource.data.slots is list && request.resource.data.slots.size() == 11
-    && request.resource.data.coachId is string && request.resource.data.captainId is string;
+  function signed(){return request.auth != null && request.auth.token.email_verified == true;}
+  function admin(){return signed() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));}
+  function validRound(round){return round.matches('^([1-9]|[12][0-9]|3[0-8])$');}
+  function validLineup(d){return d.formation in ['4-3-3','4-4-2','3-5-2','5-3-2'] && d.slots is list && d.slots.size()==11 && d.slots.toSet().size()==11 && !d.slots.hasAny([null,'']) && d.coachId is string && d.coachId.size()>0 && d.captainId is string && d.captainId in d.slots;}
+  match /admins/{uid}{allow read: if signed() && request.auth.uid==uid;allow write: if false;}
+  match /users/{uid}{
+   allow read: if signed() && (request.auth.uid==uid || admin());
+   allow create,update: if signed() && request.auth.uid==uid && request.resource.data.keys().hasOnly(['alias','formation','slots','coachId','captainId']) && request.resource.data.alias is string && request.resource.data.alias.size()>0 && request.resource.data.alias.size()<=36 && validLineup(request.resource.data);
    allow delete: if false;
+   match /lineups/{round}{
+    allow read: if signed() && (request.auth.uid==uid || admin());
+    allow create,update: if signed() && request.auth.uid==uid && validRound(round) && exists(/databases/$(database)/documents/rounds/$(round)) && get(/databases/$(database)/documents/rounds/$(round)).data.opensAt<=request.time && request.time<get(/databases/$(database)/documents/rounds/$(round)).data.closesAt && request.resource.data.keys().hasOnly(['formation','slots','coachId','captainId']) && validLineup(request.resource.data);
+    allow delete: if false;
+   }
   }
-  match /users/{uid}/lineups/{round} {
-   allow read: if signed() && request.auth.uid == uid;
-   allow create, update: if signed() && request.auth.uid == uid
-    && exists(/databases/$(database)/documents/rounds/$(round))
-    && get(/databases/$(database)/documents/rounds/$(round)).data.opensAt <= request.time
-    && request.time < get(/databases/$(database)/documents/rounds/$(round)).data.closesAt
-    && request.resource.data.keys().hasOnly(['formation','slots','coachId','captainId'])
-    && request.resource.data.keys().hasAll(['formation','slots','coachId','captainId'])
-    && request.resource.data.formation in ['4-3-3','4-4-2','3-5-2','5-3-2']
-    && request.resource.data.slots is list && request.resource.data.slots.size() == 11
-    && request.resource.data.slots.toSet().size() == 11
-    && request.resource.data.coachId is string && request.resource.data.coachId.size() > 0
-    && request.resource.data.captainId is string && request.resource.data.captainId in request.resource.data.slots;
-   allow delete: if false;
-  }
-  match /rounds/{round} {
+  match /rounds/{round}{
    allow read: if signed();
-   allow create: if admin() && round.matches('^([1-9]|[12][0-9]|3[0-8])
-  match /official/{round} {
+   allow create: if admin() && validRound(round) && request.resource.data.keys().hasOnly(['opensAt','closesAt']) && request.resource.data.opensAt is timestamp && request.resource.data.closesAt is timestamp && request.resource.data.opensAt<request.resource.data.closesAt;
+   allow update,delete: if false;
+  }
+  match /official/{round}{
    allow read: if signed();
-   allow create, update: if admin() && exists(/databases/$(database)/documents/rounds/$(round))
-    && request.time >= get(/databases/$(database)/documents/rounds/$(round)).data.closesAt
-    && request.resource.data.keys().hasOnly(['scores','results']) && request.resource.data.scores is map && request.resource.data.results is map;
+   allow create,update: if admin() && validRound(round) && exists(/databases/$(database)/documents/rounds/$(round)) && request.time>=get(/databases/$(database)/documents/rounds/$(round)).data.closesAt && request.resource.data.keys().hasOnly(['scores','results']) && request.resource.data.scores is map && request.resource.data.results is map;
    allow delete: if false;
   }
-  match /ranking/{uid} { allow read: if signed(); allow create, update: if admin() && request.resource.data.keys().hasOnly(['alias','total','played']) && request.resource.data.alias is string && request.resource.data.alias.size() <= 36 && request.resource.data.total is int && request.resource.data.played is int; allow delete: if false; }
- }
-})
-    && request.resource.data.keys().hasOnly(['opensAt','closesAt'])
-    && request.resource.data.opensAt is timestamp && request.resource.data.closesAt is timestamp
-    && request.resource.data.opensAt < request.resource.data.closesAt;
-   allow update, delete: if false;
+  match /ranking/{uid}{
+   allow read: if signed();
+   allow create,update: if admin() && request.resource.data.keys().hasOnly(['alias','total','played']) && request.resource.data.alias is string && request.resource.data.alias.size()<=36 && request.resource.data.total is int && request.resource.data.played is int && request.resource.data.played>=0;
+   allow delete: if false;
   }
-  match /official/{doc} { allow read: if signed(); allow write: if admin(); }
-  match /ranking/{uid} { allow read: if signed(); allow write: if false; }
  }
 }
