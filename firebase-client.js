@@ -42,3 +42,17 @@ export async function saveTeamResult(round,team,record,scores){
  const ref=doc(db,'official',String(round));
  return runTransaction(db,async tx=>{const snap=await tx.get(ref),old=snap.exists()?snap.data():{};const next={scores:{...old.scores,...scores},results:{...old.results,[team]:record}};tx.set(ref,next);return next;});
 }
+
+export async function readRanking(){verified();const s=await getDocs(collection(db,'ranking'));return s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.total-a.total||a.alias.localeCompare(b.alias,'es'));}
+export async function rebuildRanking(){
+ if(!await isAdmin())throw Error('Sin permisos');
+ const [users,rounds,official]=await Promise.all([getDocs(collection(db,'users')),readRounds(),readOfficial()]);
+ const closed=new Set(rounds.filter(r=>r.closesAt.toMillis()<=Date.now()&&official[r.id]).map(r=>r.id));
+ const rows=await Promise.all(users.docs.map(async u=>{
+ const history=await getDocs(collection(db,'users',u.id,'lineups'));let total=0,played=0;
+ for(const d of history.docs){if(!closed.has(d.id))continue;const l=d.data(),scores=official[d.id].scores||{};total += [...l.slots,l.coachId].reduce((sum,id)=>sum+(Number(scores[id])||0)*(id===l.captainId?2:1),0);played++;}
+ return {id:u.id,alias:u.data().alias||'Equipo Fantasy',total,played};
+ }));
+ if(rows.length>450)throw Error('Ranking demasiado grande para una publicación');
+ const batch=writeBatch(db);for(const {id,...row} of rows)batch.set(doc(db,'ranking',id),row);await batch.commit();return rows;
+}
