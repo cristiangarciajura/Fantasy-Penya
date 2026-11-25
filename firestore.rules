@@ -5,7 +5,7 @@ service cloud.firestore {
   function admin() { return signed() && exists(/databases/$(database)/documents/admins/$(request.auth.uid)); }
   match /admins/{uid} { allow read: if signed() && request.auth.uid == uid; allow write: if false; }
   match /users/{uid} {
-   allow read: if signed() && request.auth.uid == uid;
+   allow read: if signed() && (request.auth.uid == uid || admin());
    allow create, update: if signed() && request.auth.uid == uid
     && request.resource.data.keys().hasOnly(['alias','formation','slots','coachId','captainId'])
     && request.resource.data.keys().hasAll(['alias','formation','slots','coachId','captainId'])
@@ -40,7 +40,7 @@ service cloud.firestore {
     && request.resource.data.keys().hasOnly(['scores','results']) && request.resource.data.scores is map && request.resource.data.results is map;
    allow delete: if false;
   }
-  match /ranking/{uid} { allow read: if signed(); allow write: if false; }
+  match /ranking/{uid} { allow read: if signed(); allow create, update: if admin() && request.resource.data.keys().hasOnly(['alias','total','played']) && request.resource.data.alias is string && request.resource.data.alias.size() <= 36 && request.resource.data.total is int && request.resource.data.played is int; allow delete: if false; }
  }
 })
     && request.resource.data.keys().hasOnly(['opensAt','closesAt'])
