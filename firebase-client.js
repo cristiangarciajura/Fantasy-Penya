@@ -1,3 +1,4 @@
+import {DEFAULT_POLICY,scoreLineup} from './scoring-policy.js';
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js';
 import {getAuth,GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js';
 import {getFirestore,doc,getDoc,setDoc,collection,getDocs,writeBatch,runTransaction} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js';
@@ -24,21 +25,21 @@ export async function readLineups(){const s=await getDocs(collection(db,'users',
 export async function submitLineup(round,team){const uid=verified();const {formation,slots,coachId,captainId,alias}=team;if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||slots.length!==11||slots.some(x=>typeof x!=='string'||!x)||new Set(slots).size!==11||!coachId||!slots.includes(captainId))throw new Error('Alineación incompleta');const batch=writeBatch(db);batch.set(doc(db,'users',uid),{alias,formation,slots,coachId,captainId});batch.set(doc(db,'users',uid,'lineups',String(round)),{formation,slots,coachId,captainId});await batch.commit();}
 export async function readOfficial(){verified();const s=await getDocs(collection(db,'official'));return Object.fromEntries(s.docs.map(d=>[d.id,d.data()]));}
 
-export async function saveRound(round,opensAt,closesAt){
+export async function saveRound(round,opensAt,closesAt,policy=DEFAULT_POLICY){
  if(!await isAdmin())throw Error('Sin permisos');
  if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!(opensAt instanceof Date)||!(closesAt instanceof Date)||!Number.isFinite(+opensAt)||!Number.isFinite(+closesAt)||+opensAt>=+closesAt)throw Error('Fechas inválidas');
  const ref=doc(db,'rounds',String(round));if((await getDoc(ref)).exists())throw Error('Jornada ya creada');
- await setDoc(ref,{opensAt,closesAt});
+ await setDoc(ref,{opensAt,closesAt,policy});
 }
 export async function saveOfficialScores(round,scores){
  if(!await isAdmin())throw Error('Sin permisos');
- if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!scores||Object.values(scores).some(v=>!Number.isInteger(v)||v< -5||v>15))throw Error('Puntuaciones inválidas');
+ if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!scores||Object.values(scores).some(v=>!Number.isInteger(v)||v< -1000||v>1000))throw Error('Puntuaciones inválidas');
  await setDoc(doc(db,'official',String(round)),{scores});
 }
 
 export async function saveTeamResult(round,team,record,scores){
  if(!await isAdmin())throw Error('Sin permisos');
- if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!team||Object.values(scores).some(v=>!Number.isInteger(v)||v< -5||v>15))throw Error('Datos inválidos');
+ if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!team||Object.values(scores).some(v=>!Number.isInteger(v)||v< -1000||v>1000))throw Error('Datos inválidos');
  const ref=doc(db,'official',String(round));
  return runTransaction(db,async tx=>{const snap=await tx.get(ref),old=snap.exists()?snap.data():{};const next={scores:{...old.scores,...scores},results:{...old.results,[team]:record}};tx.set(ref,next);return next;});
 }
@@ -50,7 +51,7 @@ export async function rebuildRanking(){
  const closed=new Set(rounds.filter(r=>r.closesAt.toMillis()<=Date.now()&&official[r.id]).map(r=>r.id));
  const rows=await Promise.all(users.docs.map(async u=>{
  const history=await getDocs(collection(db,'users',u.id,'lineups'));let total=0,played=0;
- for(const d of history.docs){if(!closed.has(d.id))continue;const l=d.data(),scores=official[d.id].scores||{};total += [...l.slots,l.coachId].reduce((sum,id)=>sum+(Number(scores[id])||0)*(id===l.captainId?2:1),0);played++;}
+ for(const d of history.docs){if(!closed.has(d.id))continue;const l=d.data(),scores=official[d.id].scores||{};total += scoreLineup(l,scores,rounds.find(r=>r.id===d.id)?.policy||DEFAULT_POLICY);played++;}
  return {id:u.id,alias:u.data().alias||'Equipo Fantasy',total,played};
  }));
  if(rows.length>450)throw Error('Ranking demasiado grande para una publicación');
