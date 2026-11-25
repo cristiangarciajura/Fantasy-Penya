@@ -1,6 +1,6 @@
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js';
 import {getAuth,GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js';
-import {getFirestore,doc,getDoc,setDoc} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js';
+import {getFirestore,doc,getDoc,setDoc,collection,getDocs,writeBatch} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js';
 const app=initializeApp({apiKey:"AIzaSyD-RZxxWJqPt5W9IRRS6CjcpYrwgVRXdd0",authDomain:"fantasy-penya.firebaseapp.com",projectId:"fantasy-penya",storageBucket:"fantasy-penya.firebasestorage.app",messagingSenderId:"907901895323",appId:"1:907901895323:web:f3a022b098a8f4b5213c3e"});
 const auth=getAuth(app),db=getFirestore(app);
 auth.languageCode='es';
@@ -18,3 +18,8 @@ function verified(){const u=auth.currentUser;if(!u?.emailVerified)throw new Erro
 export async function readTeam(){const snap=await getDoc(doc(db,'users',verified()));return snap.exists()?snap.data():null;}
 export async function writeTeam({alias,formation,slots,coachId,captainId}){await setDoc(doc(db,'users',verified()),{alias,formation,slots,coachId,captainId});}
 export async function isAdmin(){return (await getDoc(doc(db,'admins',verified()))).exists();}
+
+export async function readRounds(){verified();const s=await getDocs(collection(db,'rounds'));return s.docs.map(d=>({id:d.id,...d.data()}));}
+export async function readLineups(){const s=await getDocs(collection(db,'users',verified(),'lineups'));return Object.fromEntries(s.docs.map(d=>[d.id,d.data()]));}
+export async function submitLineup(round,team){const uid=verified();const {formation,slots,coachId,captainId,alias}=team;if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||slots.length!==11||slots.some(x=>typeof x!=='string'||!x)||new Set(slots).size!==11||!coachId||!slots.includes(captainId))throw new Error('Alineación incompleta');const batch=writeBatch(db);batch.set(doc(db,'users',uid),{alias,formation,slots,coachId,captainId});batch.set(doc(db,'users',uid,'lineups',String(round)),{formation,slots,coachId,captainId});await batch.commit();}
+export async function readOfficial(){verified();const s=await getDocs(collection(db,'official'));return Object.fromEntries(s.docs.map(d=>[d.id,d.data()]));}
