@@ -6,7 +6,7 @@
 <label for="expected">Equipos previstos (uno por línea)</label><textarea id="expected" style="min-height:100px" placeholder="Cadete S15"></textarea><button id="reset">Reiniciar simulación</button><p id="progress" aria-live="polite"></p><label for="data">Datos de partidos en JSON</label><textarea id="data" placeholder="Pega aquí el lote de partidos"></textarea>
 <label for="file">O selecciona un archivo JSON</label><input id="file" type="file" accept=".json,application/json">
 <button id="run">Validar y calcular</button><button id="sample">Cargar ejemplo ficticio</button>
-<section id="out" aria-live="polite"></section>
+<fieldset><legend>Publicación real (administrador)</legend><p>Inicia sesión en Fantasy Penya en este mismo navegador. La publicación vuelve a validar el lote con el reglamento de la jornada.</p><label>Jornada <input id="publishRound" type="number" min="1" max="38"></label><button id="publish">Publicar lote y actualizar ranking</button><p id="publishStatus" role="status"></p></fieldset><section id="out" aria-live="polite"></section>
 <script type="module">
 import {prepareBatch} from './batch-import.js';
 import {reviewBatch} from './batch-merge.js';
@@ -14,6 +14,7 @@ import {roundProgress} from './round-progress.js';
 let simulated={scores:{},results:{}};
 const el=id=>document.getElementById(id);
 const line=(parent,tag,value)=>{const n=document.createElement(tag);n.textContent=value;parent.append(n);return n};
+el('publish').onclick=async()=>{const status=el('publishStatus'),button=el('publish');button.disabled=true;try{const round=Number(el('publishRound').value),matches=JSON.parse(el('data').value);if(!Number.isInteger(round)||round<1||round>38||!Array.isArray(matches)||!matches.length)throw Error('Jornada o lote inválido');const client=await import('./firebase-client.js');const user=await new Promise(resolve=>{let unsubscribe=client.session.observe(u=>{resolve(u);queueMicrotask(()=>unsubscribe())})});if(!user?.emailVerified||!await client.isAdmin())throw Error('Se requiere una cuenta administradora verificada');const phase=await client.loadPhase();if(!confirm('Publicar '+matches.length+' partidos en jornada '+round+' ('+phase+')?'))return;const result=await client.publishBatchAndRefreshRanking(round,matches);status.textContent=result.rankingUpdated?'Resultados y clasificación publicados':'Resultados publicados; clasificación pendiente de actualizar';}catch(e){status.textContent=e.message}finally{button.disabled=false}};
 el('reset').onclick=()=>{simulated={scores:{},results:{}};el('progress').textContent='Simulación reiniciada';el('out').replaceChildren()};
 el('file').onchange=async()=>{try{const f=el('file').files[0];if(f){if(f.size>1000000)throw Error('Archivo demasiado grande');el('data').value=await f.text()}}catch(e){el('out').textContent=e.message}};
 async function catalog(path){const r=await fetch(path);if(!r.ok)throw Error('No se pudo cargar el catálogo');return r.json()}
