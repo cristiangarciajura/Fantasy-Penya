@@ -53,7 +53,7 @@ export async function saveTeamResult(round,team,record,scores){
  for(const [id,n] of Object.entries(record.goals||{}))if(!roster.some(p=>p.id===id)||!Number.isInteger(n)||n<0||n>99)throw Error('Goles inválidos');
  for(const [id,n] of Object.entries(record.reds||{}))if(!roster.some(p=>p.id===id)||![0,1].includes(n))throw Error('Expulsión inválida');
  const ref=doc(db,currentPhase+'_official',key),calendarRef=doc(db,currentPhase+'_rounds',key);
- return runTransaction(db,async tx=>{
+ const published=await runTransaction(db,async tx=>{
   const calendar=await tx.get(calendarRef),snap=await tx.get(ref);
   if(!calendar.exists()||calendar.data().closesAt.toMillis()>Date.now())throw Error('Jornada no cerrada');
   const policy=calendar.data().policy;if(!policy)throw Error('Falta reglamento');
@@ -63,6 +63,7 @@ export async function saveTeamResult(round,team,record,scores){
   const next={scores:nextScores,results:{...old.results,[team]:{...record,...(previous?.matchId?{matchId:previous.matchId}:{}),scoreIds:Object.keys(calculated)}}};
   tx.set(ref,next);return next;
  });
+ try{await rebuildRanking();return {...published,rankingUpdated:true};}catch(error){return {...published,rankingUpdated:false,rankingError:error.message};}
 }
 
 export async function readRanking(){verified();const s=await getDocs(collection(db,scoped('ranking')));return s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.total-a.total||a.alias.localeCompare(b.alias,'es'));}
