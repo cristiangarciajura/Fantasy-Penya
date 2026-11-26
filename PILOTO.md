@@ -20,11 +20,19 @@ No desplegar en main hasta completar las comprobaciones. No crear config/competi
 - Confirmar que no se mezclan datos piloto y oficiales.
 
 ## Bloqueos actuales
-- Pantalla de importación aún en simulación; publicación y ranking no conectados a ella.
-- Registro de participantes e inicialización del catálogo no conectados a la interfaz.
+- Pantalla import-preview.html conectada a publicación y ranking; requiere prueba real. Validar lote antes de publicar; ejemplo ficticio bloqueado.
+- Inicialización del catálogo no conectada a la interfaz. Seguimiento incluye perfiles guardados, pero no detecta cuentas sin perfil ni registro independiente.
 - Reglas sin prueba en emulador ni en Firebase real.
-- GitHub Actions pendiente de verificar.
+- GitHub Actions pendiente de verificar; pruebas puras ampliadas y ejecutadas con éxito en entorno de desarrollo.
+- Un fallo de lectura del ranking durante el acceso puede bloquear la carga del equipo.
 - No hay acceso directo fiable a actas FCF.
 - El dominio de prueba y su despliegue deben confirmarse antes de invitar participantes.
 
 No utilizar actas reales ni datos personales adicionales en pruebas públicas.
+
+## Publicación durante el piloto
+- Publicación manual y masiva recalculan con la política almacenada de la jornada.
+- Si falla el ranking tras guardar resultados, usar Publicar clasificación sin reintroducir partidos.
+- La pantalla independiente import-preview.html requiere sesión administradora verificada en el mismo navegador.
+- La vista de simulación usa política provisional; comprobar diferencias con la política real antes de publicar.
+- Un partido por categoría y jornada; no reutilizar identificadores entre categorías.
