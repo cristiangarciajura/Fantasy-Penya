@@ -82,7 +82,9 @@ export async function publishMatchBatch(round,matches){
  return runTransaction(db,async tx=>{
   const calendar=await tx.get(roundRef),old=await tx.get(ref);
   if(!calendar.exists()||calendar.data().closesAt.toMillis()>Date.now())throw Error('Jornada no cerrada');
-  const batch=prepareBatch(matches,players,coaches,calendar.data().policy||DEFAULT_POLICY);
+  const policy=calendar.data().policy;
+  if(!policy)throw Error('La jornada no tiene reglamento configurado');
+  const batch=prepareBatch(matches,players,coaches,policy);
   if(!batch.canPublish)throw Error('Lote con incidencias: '+batch.issues.map(x=>x.error).join('; '));
   const next=mergeBatch(old.exists()?old.data():{},batch);
   tx.set(ref,next);return next;
