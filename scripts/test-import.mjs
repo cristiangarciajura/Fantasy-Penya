@@ -24,3 +24,10 @@ for(const p of players)assert.equal(fix.next.scores[p.id],p.team===corrected.tea
 const slots=players.slice(0,11).map(p=>p.id),coachId=coaches[0].id;
 assert.equal(scoreLineup({slots,coachId,captainId:slots[0]},second.next.scores),slots.reduce((s,id)=>s+second.next.scores[id],0)+second.next.scores[coachId]+second.next.scores[slots[0]]);
 console.log('OK: importaciones parciales, puntuaciones, repetición, rectificación y capitán');
+
+
+const conflicting={...matches[0],team:teams[1]};
+assert.throws(()=>reviewBatch(first.next,prepareBatch([conflicting],players,coaches)),/otra categoría/);
+const invalid={...matches[0],forGoals:2,events:[]};
+assert.equal(prepareBatch([invalid],players,coaches).canPublish,false);
+assert.equal(prepareBatch([matches[0],matches[0]],players,coaches).canPublish,false);
