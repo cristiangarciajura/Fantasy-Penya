@@ -1,6 +1,6 @@
 import {prepareBatch} from './batch-import.js';
 import {mergeBatch} from './batch-merge.js';
-import {DEFAULT_POLICY,scoreLineup} from './scoring-policy.js';
+import {DEFAULT_POLICY,scoreLineup,scoreTeam} from './scoring-policy.js';
 import {initializeApp} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-app.js';
 import {getAuth,GoogleAuthProvider,signInWithPopup,signInWithEmailAndPassword,createUserWithEmailAndPassword,sendEmailVerification,sendPasswordResetEmail,signOut,onAuthStateChanged} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-auth.js';
 import {getFirestore,doc,getDoc,setDoc,collection,getDocs,writeBatch,runTransaction} from 'https://www.gstatic.com/firebasejs/12.6.0/firebase-firestore.js';
@@ -44,9 +44,25 @@ export async function saveOfficialScores(round,scores){
 
 export async function saveTeamResult(round,team,record,scores){
  if(!await isAdmin())throw Error('Sin permisos');
- if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(String(round))||!team||Object.values(scores).some(v=>!Number.isInteger(v)||v< -1000||v>1000))throw Error('Datos inválidos');
- const ref=doc(db,scoped('official'),String(round));
- return runTransaction(db,async tx=>{const snap=await tx.get(ref),old=snap.exists()?snap.data():{};const next={scores:{...old.scores,...scores},results:{...old.results,[team]:record}};tx.set(ref,next);return next;});
+ const key=String(round);
+ if(!/^([1-9]|[12][0-9]|3[0-8])$/.test(key)||!team)throw Error('Datos inválidos');
+ const currentPhase=phase;
+ const [players,coaches]=await Promise.all(['jugadores.json','entrenadores.json'].map(async path=>{const r=await fetch('./'+path);if(!r.ok)throw Error('Catálogo no disponible');return r.json()}));
+ const roster=players.filter(p=>p.team===team);
+ if(!roster.length||!['win','draw','loss'].includes(record.result)||typeof record.cleanSheet!=='boolean')throw Error('Resultado inválido');
+ for(const [id,n] of Object.entries(record.goals||{}))if(!roster.some(p=>p.id===id)||!Number.isInteger(n)||n<0||n>99)throw Error('Goles inválidos');
+ for(const [id,n] of Object.entries(record.reds||{}))if(!roster.some(p=>p.id===id)||![0,1].includes(n))throw Error('Expulsión inválida');
+ const ref=doc(db,currentPhase+'_official',key),calendarRef=doc(db,currentPhase+'_rounds',key);
+ return runTransaction(db,async tx=>{
+  const calendar=await tx.get(calendarRef),snap=await tx.get(ref);
+  if(!calendar.exists()||calendar.data().closesAt.toMillis()>Date.now())throw Error('Jornada no cerrada');
+  const policy=calendar.data().policy;if(!policy)throw Error('Falta reglamento');
+  const old=snap.exists()?snap.data():{},previous=old.results?.[team];
+  const calculated=scoreTeam(players,coaches,team,record,policy);
+  const nextScores={...old.scores};for(const id of previous?.scoreIds||[])delete nextScores[id];Object.assign(nextScores,calculated);
+  const next={scores:nextScores,results:{...old.results,[team]:{...record,...(previous?.matchId?{matchId:previous.matchId}:{}),scoreIds:Object.keys(calculated)}}};
+  tx.set(ref,next);return next;
+ });
 }
 
 export async function readRanking(){verified();const s=await getDocs(collection(db,scoped('ranking')));return s.docs.map(d=>({id:d.id,...d.data()})).sort((a,b)=>b.total-a.total||a.alias.localeCompare(b.alias,'es'));}
