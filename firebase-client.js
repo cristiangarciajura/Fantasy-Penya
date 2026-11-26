@@ -56,7 +56,7 @@ export async function rebuildRanking(){
  const closed=new Set(rounds.filter(r=>r.closesAt.toMillis()<=Date.now()&&official[r.id]).map(r=>r.id));
  const rows=await Promise.all(users.docs.map(async u=>{
  const history=await getDocs(collection(db,'users',u.id,scoped('lineups')));let total=0,played=0;
- for(const d of history.docs){if(!closed.has(d.id))continue;const l=d.data(),scores=official[d.id].scores||{};total += scoreLineup(l,scores,rounds.find(r=>r.id===d.id)?.policy||DEFAULT_POLICY);played++;}
+ for(const d of history.docs){if(!closed.has(d.id))continue;const l=d.data(),scores=official[d.id].scores||{};const policy=rounds.find(r=>r.id===d.id)?.policy;if(!policy)throw Error('Falta reglamento de jornada '+d.id);total += scoreLineup(l,scores,policy);played++;}
  return {id:u.id,alias:u.data().alias||'Equipo Fantasy',total,played};
  }));
  if(rows.length>450)throw Error('Ranking demasiado grande para una publicación');
