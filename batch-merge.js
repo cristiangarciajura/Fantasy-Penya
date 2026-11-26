@@ -7,6 +7,7 @@ export function mergeBatch(previous,batch){
   if(!item.team||!item.matchId||teams.has(item.team)||ids.has(item.matchId))throw Error('Partido duplicado o inválido');
   teams.add(item.team);ids.add(item.matchId);
   if(!item.record||!item.scores||Object.values(item.scores).some(v=>!Number.isInteger(v)||Math.abs(v)>1000))throw Error('Puntuación inválida');
+  if(Object.entries(results).some(([team,record])=>team!==item.team&&record?.matchId===item.matchId))throw Error('El partido ya está asociado a otra categoría');
   const old=results[item.team];
   if(old?.matchId&&old.matchId!==item.matchId)throw Error('La categoría ya tiene otro partido en esta jornada');
   for(const id of old?.scoreIds||[])delete scores[id];
